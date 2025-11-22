@@ -1,0 +1,4475 @@
+[
+  {
+    "nome": "git-add",
+    "descricao": "Adiciona o conteúdo do arquivo ao índice (staging area).",
+    "uso": "Prepara as modificações no diretório de trabalho para o próximo commit. Pode adicionar arquivos inteiros ou partes de arquivos interativamente.",
+    "tipo": "Comando de Shell Padrão",
+    "link": "https://git-scm.com/docs/git-add",
+    "exemplos": [
+      "git add .",
+      "git add arquivo.txt",
+      "git add -p"
+    ]
+  },
+  {
+    "nome": "git-am",
+    "descricao": "Aplica uma série de patches de uma caixa de e-mail (mbox).",
+    "uso": "Usado para aplicar patches que foram gerados usando 'git format-patch' e enviados via e-mail, simulando um fluxo de trabalho de aplicação de patches.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-am",
+    "exemplos": [
+      "git am 0001-patch.patch",
+      "git am --signoff < patches.mbox",
+      "git am --abort"
+    ]
+  },
+  {
+    "nome": "git-archive",
+    "descricao": "Cria um arquivo de arquivos a partir de uma árvore de commits específica.",
+    "uso": "Gera um tar ou zip contendo a estrutura de arquivos do projeto em um determinado commit, branch ou tag, útil para distribuição de releases.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-archive",
+    "exemplos": [
+      "git archive --format=zip HEAD -o projeto.zip",
+      "git archive --format=tar v1.0 | gzip > projeto.tgz"
+    ]
+  },
+  {
+    "nome": "git-backfill",
+    "descricao": "Preenche dados de índice ou grafo de commits de forma otimizada (Usado internamente, frequentemente com scalar).",
+    "uso": "Comando utilitário, geralmente usado em repositórios grandes, para garantir que as estruturas de dados internas (como o grafo de commits) estejam completas para otimização de desempenho.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-backfill",
+    "exemplos": [
+      "git backfill --all",
+      "scalar run git backfill"
+    ]
+  },
+  {
+    "nome": "git-bisect",
+    "descricao": "Encontra de forma eficiente o commit que introduziu um bug (busca binária).",
+    "uso": "Automatiza o processo de busca binária no histórico de commits para isolar o ponto exato onde uma regressão ou falha foi introduzida.",
+    "tipo": "Comando Interativo (REPLs)",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-bisect",
+    "exemplos": [
+      "git bisect start",
+      "git bisect bad",
+      "git bisect good v1.0"
+    ]
+  },
+  {
+    "nome": "git-branch",
+    "descricao": "Lista, cria ou deleta branches.",
+    "uso": "Comando essencial para o gerenciamento do fluxo de trabalho. Permite visualizar o estado das branches locais, criar novas branches ou remover branches obsoletas.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-branch",
+    "exemplos": [
+      "git branch",
+      "git branch nova-feature",
+      "git branch -d feature-antiga"
+    ]
+  },
+  {
+    "nome": "git-bundle",
+    "descricao": "Empacota objetos e referências em um arquivo binário portátil.",
+    "uso": "Permite transferir o histórico Git sem uma conexão de rede direta, encapsulando referências e objetos em um único arquivo, útil para migrações offline.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://git-scm.com/docs/git-bundle",
+    "exemplos": [
+      "git bundle create repo.bundle main",
+      "git clone repo.bundle meu-repo-local"
+    ]
+  },
+  {
+    "nome": "git-checkout",
+    "descricao": "Muda de branch ou restaura arquivos da árvore de trabalho.",
+    "uso": "Usado historicamente para navegar entre branches e commits. Em versões mais recentes, 'git switch' e 'git restore' assumiram parte de suas funcionalidades.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-checkout",
+    "exemplos": [
+      "git checkout main",
+      "git checkout -b nova-branch",
+      "git checkout -- arquivo.txt"
+    ]
+  },
+  {
+    "nome": "git-cherry-pick",
+    "descricao": "Aplica as mudanças introduzidas por um commit específico em outra branch.",
+    "uso": "Copia a alteração (diff) de um commit e a aplica como um novo commit na branch atual, útil para mover correções pontuais entre branches.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-cherry-pick",
+    "exemplos": [
+      "git cherry-pick <hash-do-commit>",
+      "git cherry-pick feature^..feature"
+    ]
+  },
+  {
+    "nome": "git-citool",
+    "descricao": "Interface gráfica Tcl/Tk para fazer commit.",
+    "uso": "Abre uma ferramenta gráfica simples para selecionar arquivos para o commit, escrever a mensagem e submeter.",
+    "tipo": "Comando Interativo (REPLs)",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://git-scm.com/docs/git-citool",
+    "exemplos": [
+      "git citool"
+    ]
+  },
+  {
+    "nome": "git-clean",
+    "descricao": "Remove arquivos não rastreados do diretório de trabalho.",
+    "uso": "Limpa o diretório de trabalho de arquivos gerados em tempo de execução ou arquivos de compilação que não estão sob controle do Git.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-clean",
+    "exemplos": [
+      "git clean -n (simula)",
+      "git clean -f",
+      "git clean -fdX (remove dirs e ignorados)"
+    ]
+  },
+  {
+    "nome": "git-clone",
+    "descricao": "Clona um repositório para um novo diretório.",
+    "uso": "Cria uma cópia local completa de um repositório Git remoto, incluindo todo o histórico de commits e branches.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://git-scm.com/docs/git-clone",
+    "exemplos": [
+      "git clone https://exemplo.com/repo.git",
+      "git clone ssh://usuario@host/repo.git meu_projeto"
+    ]
+  },
+  {
+    "nome": "git-commit",
+    "descricao": "Grava as mudanças do índice no repositório.",
+    "uso": "Cria um novo commit contendo o estado atual do índice (staging area), registrando as mudanças no histórico do projeto.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-commit",
+    "exemplos": [
+      "git commit -m \"Mensagem do commit\"",
+      "git commit -a -m \"Commit direto\"",
+      "git commit --amend"
+    ]
+  },
+  {
+    "nome": "git-describe",
+    "descricao": "Mostra o nome de um objeto de forma legível e concisa.",
+    "uso": "Gera um nome de tag mais próximo, seguido pelo número de commits e o hash abreviado do commit atual, útil para nomear builds.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-describe",
+    "exemplos": [
+      "git describe --tags",
+      "git describe --always --long"
+    ]
+  },
+  {
+    "nome": "git-diff",
+    "descricao": "Mostra as diferenças entre commits, árvore de trabalho e/ou índice.",
+    "uso": "Compara dois pontos no Git (arquivos, índice, commits, branches) e exibe as modificações de forma detalhada.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-diff",
+    "exemplos": [
+      "git diff",
+      "git diff --staged",
+      "git diff branchA branchB"
+    ]
+  },
+  {
+    "nome": "git-fetch",
+    "descricao": "Baixa objetos e referências de outro repositório.",
+    "uso": "Traz o histórico e as referências de um repositório remoto para o repositório local, mas sem modificar o diretório de trabalho local (diferente de 'pull').",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://git-scm.com/docs/git-fetch",
+    "exemplos": [
+      "git fetch origin",
+      "git fetch --all",
+      "git fetch origin develop:localdevelop"
+    ]
+  },
+  {
+    "nome": "git-format-patch",
+    "descricao": "Prepara patches para serem submetidos por e-mail.",
+    "uso": "Gera arquivos no formato de patch do Unix a partir de commits, que podem ser enviados por e-mail e aplicados usando 'git am'.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-format-patch",
+    "exemplos": [
+      "git format-patch HEAD^",
+      "git format-patch origin/main"
+    ]
+  },
+  {
+    "nome": "git-gc",
+    "descricao": "Limpa objetos desnecessários e otimiza o repositório local.",
+    "uso": "Executa a coleta de lixo, compactando objetos soltos em arquivos de pack para reduzir o tamanho do disco e melhorar o desempenho.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-gc",
+    "exemplos": [
+      "git gc",
+      "git gc --aggressive"
+    ]
+  },
+  {
+    "nome": "git-gui",
+    "descricao": "Interface gráfica Tcl/Tk para gerenciar repositórios Git.",
+    "uso": "Fornece uma interface visual completa para fazer commits, gerenciar branches, visualizar logs e aplicar patches.",
+    "tipo": "Comando Interativo (REPLs)",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://git-scm.com/docs/git-gui",
+    "exemplos": [
+      "git gui"
+    ]
+  },
+  {
+    "nome": "git-init",
+    "descricao": "Cria um repositório Git vazio ou reinicializa um existente.",
+    "uso": "É o primeiro comando a ser executado para iniciar o rastreamento de um projeto (criar um repositório git) ou para reconfigurar as estruturas internas de um repositório já existente.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-init",
+    "exemplos": [
+      "git init",
+      "git init --bare"
+    ]
+  },
+  {
+    "nome": "git-log",
+    "descricao": "Mostra o histórico de commits.",
+    "uso": "Permite visualizar detalhadamente o histórico de commits, incluindo autor, data, mensagem e as mudanças introduzidas.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-log",
+    "exemplos": [
+      "git log",
+      "git log --oneline --graph",
+      "git log -p arquivo.txt"
+    ]
+  },
+  {
+    "nome": "git-maintenance",
+    "descricao": "Executa tarefas de manutenção e otimização em segundo plano.",
+    "uso": "Configura e executa tarefas de housekeeping (como 'gc' e 'repack') de forma automática e eficiente, especialmente útil em repositórios grandes.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-maintenance",
+    "exemplos": [
+      "git maintenance start",
+      "git maintenance run",
+      "git maintenance stop"
+    ]
+  },
+  {
+    "nome": "git-merge",
+    "descricao": "Une duas ou mais histórias de desenvolvimento.",
+    "uso": "Combina o histórico de commits de uma branch em outra, criando geralmente um commit de merge, a menos que seja um fast-forward.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-merge",
+    "exemplos": [
+      "git merge feature/nova-funcao",
+      "git merge --abort",
+      "git merge --no-ff dev"
+    ]
+  },
+  {
+    "nome": "git-notes",
+    "descricao": "Adiciona ou inspeciona notas de objetos Git.",
+    "uso": "Permite anexar metadados ou informações adicionais a commits, tags ou outros objetos Git, sem alterar o ID (hash) do objeto.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-notes",
+    "exemplos": [
+      "git notes add -m \"Revisado\"",
+      "git notes show HEAD",
+      "git notes merge origin/notes"
+    ]
+  },
+  {
+    "nome": "git-pull",
+    "descricao": "Busca e integra com outro repositório ou branch local.",
+    "uso": "Combinação de 'git fetch' seguido por 'git merge' (ou 'git rebase', se configurado). Atualiza a branch local com as mudanças do remoto.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://git-scm.com/docs/git-pull",
+    "exemplos": [
+      "git pull origin main",
+      "git pull --rebase",
+      "git pull"
+    ]
+  },
+  {
+    "nome": "git-push",
+    "descricao": "Atualiza referências remotas juntamente com objetos associados.",
+    "uso": "Envia os commits locais para um repositório remoto, tornando-os disponíveis para outros colaboradores.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://git-scm.com/docs/git-push",
+    "exemplos": [
+      "git push origin main",
+      "git push -u origin feature-x",
+      "git push origin --delete branch-antiga"
+    ]
+  },
+  {
+    "nome": "git-range-diff",
+    "descricao": "Compara dois intervalos de commits (históricos).",
+    "uso": "Mostra a diferença entre as mensagens e os patches de dois conjuntos de commits (por exemplo, antes e depois de um rebase), útil para revisão de histórico reescrito.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-range-diff",
+    "exemplos": [
+      "git range-diff HEAD~3 HEAD~3..HEAD",
+      "git range-diff feature-old feature-new"
+    ]
+  },
+  {
+    "nome": "git-rebase",
+    "descricao": "Reaplica commits em cima de outra base de commits.",
+    "uso": "Reescreve o histórico movendo a base da branch atual para um novo commit base, útil para manter um histórico linear e limpo.",
+    "tipo": "Comando Interativo (REPLs)",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-rebase",
+    "exemplos": [
+      "git rebase main",
+      "git rebase -i HEAD~5",
+      "git rebase --abort"
+    ]
+  },
+  {
+    "nome": "git-reset",
+    "descricao": "Redefine o HEAD atual para um estado especificado.",
+    "uso": "Usado para desfazer commits ('soft', 'mixed') ou descartar mudanças no diretório de trabalho e no índice ('hard').",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-reset",
+    "exemplos": [
+      "git reset HEAD^",
+      "git reset --soft HEAD~2",
+      "git reset --hard origin/main"
+    ]
+  },
+  {
+    "nome": "git-restore",
+    "descricao": "Restaura arquivos da árvore de trabalho ou do índice.",
+    "uso": "Comando focado em restaurar arquivos para um estado anterior (commit ou índice), separando a funcionalidade de manipulação de arquivos de 'git checkout'.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-restore",
+    "exemplos": [
+      "git restore arquivo.txt",
+      "git restore --staged arquivo.txt",
+      "git restore --source=HEAD~2 arquivo.txt"
+    ]
+  },
+  {
+    "nome": "git-revert",
+    "descricao": "Reverte alguns commits existentes.",
+    "uso": "Cria um novo commit que desfaz as alterações introduzidas por um commit anterior. Preserva o histórico, ao contrário de 'git reset'.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-revert",
+    "exemplos": [
+      "git revert <hash-do-commit>",
+      "git revert HEAD~3..HEAD",
+      "git revert -n <hash>"
+    ]
+  },
+  {
+    "nome": "git-shortlog",
+    "descricao": "Resume a saída do 'git log'.",
+    "uso": "Gera um log de commits agrupado por autor, mostrando um resumo conciso das mensagens de commit, ideal para notas de release.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-shortlog",
+    "exemplos": [
+      "git shortlog",
+      "git shortlog -sn"
+    ]
+  },
+  {
+    "nome": "git-show",
+    "descricao": "Mostra vários tipos de objetos.",
+    "uso": "Exibe informações sobre um commit, tag, blob ou árvore. Mais frequentemente usado para mostrar o commit e o diff associado.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-show",
+    "exemplos": [
+      "git show HEAD",
+      "git show v1.0",
+      "git show <hash>:arquivo.txt"
+    ]
+  },
+  {
+    "nome": "git-sparse-checkout",
+    "descricao": "Reduz o diretório de trabalho a um subconjunto de subdiretórios.",
+    "uso": "Permite que o usuário defina padrões de inclusão para que apenas partes específicas do repositório sejam checadas no disco, economizando espaço em repositórios monorepo.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-sparse-checkout",
+    "exemplos": [
+      "git sparse-checkout init",
+      "git sparse-checkout set docs/ src/featureX"
+    ]
+  },
+  {
+    "nome": "git-stash",
+    "descricao": "Armazena temporariamente mudanças não commitadas.",
+    "uso": "Salva o estado atual (diretório de trabalho e índice) em uma pilha temporária, permitindo que o usuário mude de contexto ou branch sem commit.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-stash",
+    "exemplos": [
+      "git stash push -m \"WIP\"",
+      "git stash pop",
+      "git stash list"
+    ]
+  },
+  {
+    "nome": "git-status",
+    "descricao": "Mostra o estado da árvore de trabalho e do índice.",
+    "uso": "Informa quais arquivos foram modificados, quais estão prontos para o commit (staged) e quais são arquivos não rastreados.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-status",
+    "exemplos": [
+      "git status",
+      "git status -s"
+    ]
+  },
+  {
+    "nome": "git-submodule",
+    "descricao": "Inicializa, atualiza ou inspeciona submodules.",
+    "uso": "Gerencia repositórios aninhados dentro de um repositório pai, permitindo incluir projetos externos como dependências no repositório principal.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-submodule",
+    "exemplos": [
+      "git submodule init",
+      "git submodule update --remote",
+      "git submodule add url/repo libs/repo"
+    ]
+  },
+  {
+    "nome": "git-switch",
+    "descricao": "Alterna branches.",
+    "uso": "Comando moderno para mudar de branch, substituindo a funcionalidade de navegação de 'git checkout'. Focado em operações de branch.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-switch",
+    "exemplos": [
+      "git switch main",
+      "git switch -c nova-feature",
+      "git switch -"
+    ]
+  },
+  {
+    "nome": "git-tag",
+    "descricao": "Cria, lista, deleta ou verifica objetos de tag.",
+    "uso": "Usado para marcar pontos específicos na história como importantes (por exemplo, releases), geralmente usando tags leves ou anotadas.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-tag",
+    "exemplos": [
+      "git tag v1.0.0",
+      "git tag -a v1.0.1 -m \"Release 1.0.1\"",
+      "git tag -d antiga-tag"
+    ]
+  },
+  {
+    "nome": "git-worktree",
+    "descricao": "Gerencia múltiplas árvores de trabalho anexadas a um repositório.",
+    "uso": "Permite que você tenha múltiplas branches checadas simultaneamente em diferentes diretórios, usando o mesmo repositório centralizado.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-worktree",
+    "exemplos": [
+      "git worktree add -b hotfix ../hotfix main",
+      "git worktree list",
+      "git worktree remove ../hotfix"
+    ]
+  },
+  {
+    "nome": "gitk",
+    "descricao": "Navegador de repositório Git baseado em Tcl/Tk.",
+    "uso": "Interface gráfica para visualizar o histórico de commits, a estrutura das branches e os detalhes dos commits.",
+    "tipo": "Comando Interativo (REPLs)",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://git-scm.com/docs/gitk",
+    "exemplos": [
+      "gitk",
+      "gitk --all"
+    ]
+  },
+  {
+    "nome": "git-config",
+    "descricao": "Obtém e define opções de configuração do repositório ou globais.",
+    "uso": "Usado para personalizar o comportamento do Git, desde informações de usuário e aliases até configurações avançadas de merge e rede.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-config",
+    "exemplos": [
+      "git config --global user.name \"Meu Nome\"",
+      "git config --list",
+      "git config core.editor vim"
+    ]
+  },
+  {
+    "nome": "git-fast-export",
+    "descricao": "Exporta o histórico Git para um formato que pode ser facilmente importado.",
+    "uso": "Cria um fluxo de dados baseado em commits, projetado para ser rapidamente lido por 'git fast-import', útil para migrações de repositórios.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-fast-export",
+    "exemplos": [
+      "git fast-export --all > repo.dump",
+      "git fast-export HEAD^..HEAD"
+    ]
+  },
+  {
+    "nome": "git-fast-import",
+    "descricao": "Backend para importar dados em um repositório Git de forma rápida.",
+    "uso": "Lê o formato de fluxo de dados de exportação e cria commits, branches e tags no repositório de forma muito mais eficiente do que criar objetos Git individualmente.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-fast-import",
+    "exemplos": [
+      "cat repo.dump | git fast-import"
+    ]
+  },
+  {
+    "nome": "git-filter-branch",
+    "descricao": "Reescreve branches.",
+    "uso": "Permite modificar um grande número de commits (ex: remover um arquivo de todo o histórico). É um comando poderoso e destrutivo, considerado legado. A ferramenta moderna e recomendada é 'git filter-repo'.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-filter-branch",
+    "exemplos": [
+      "git filter-branch --tree-filter 'rm -f senha.txt' HEAD",
+      "git filter-branch --env-filter ..."
+    ]
+  },
+  {
+    "nome": "git-mergetool",
+    "descricao": "Executa ferramentas de resolução de conflitos de merge para resolver conflitos.",
+    "uso": "Abre uma ferramenta gráfica ou de console (como 'kdiff3' ou 'vimdiff') para auxiliar na resolução manual de conflitos de merge.",
+    "tipo": "Comando Interativo (REPLs)",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-mergetool",
+    "exemplos": [
+      "git mergetool",
+      "git mergetool --tool=vscode"
+    ]
+  },
+  {
+    "nome": "git-pack-refs",
+    "descricao": "Empacota referências soltas para armazenamento eficiente.",
+    "uso": "Move referências (como branches e tags) de arquivos individuais para um único arquivo 'packed-refs', acelerando o acesso a elas.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-pack-refs",
+    "exemplos": [
+      "git pack-refs --all",
+      "git pack-refs --prune"
+    ]
+  },
+  {
+    "nome": "git-prune",
+    "descricao": "Remove objetos inacessíveis do banco de dados.",
+    "uso": "Remove objetos Git que não são mais referenciados por nenhum commit, tag ou reflog, ajudando a liberar espaço. Geralmente chamado por 'git gc'.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-prune",
+    "exemplos": [
+      "git prune --expire 2.weeks.ago",
+      "git prune -v"
+    ]
+  },
+  {
+    "nome": "git-reflog",
+    "descricao": "Gerencia informações do log de referências.",
+    "uso": "Exibe o registro de todas as atualizações no HEAD e em outras referências locais, permitindo recuperar commits que parecem perdidos.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-reflog",
+    "exemplos": [
+      "git reflog",
+      "git reflog show develop",
+      "git reflog expire --all"
+    ]
+  },
+  {
+    "nome": "git-refs",
+    "descricao": "Comando de pluming para gerenciar referências (refs) diretamente.",
+    "uso": "Geralmente não é usado diretamente. É o namespace onde as referências são armazenadas (refs/heads/, refs/tags/). Funcionalidade acessada via `git for-each-ref` ou `git symbolic-ref`.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-refs",
+    "exemplos": [
+      "cat .git/refs/heads/main"
+    ]
+  },
+  {
+    "nome": "git-remote",
+    "descricao": "Gerencia um conjunto de repositórios remotos rastreados.",
+    "uso": "Usado para adicionar, renomear, remover ou inspecionar as conexões remotas configuradas em seu repositório local.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-remote",
+    "exemplos": [
+      "git remote add upstream url/repo.git",
+      "git remote -v",
+      "git remote remove origin"
+    ]
+  },
+  {
+    "nome": "git-repack",
+    "descricao": "Empacota objetos descompactados em um arquivo de pack.",
+    "uso": "Otimiza o armazenamento de objetos Git, combinando objetos soltos ou packs existentes em packs maiores e mais eficientes, melhorando o desempenho de acesso.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-repack",
+    "exemplos": [
+      "git repack -a -d",
+      "git repack -adl --depth=250"
+    ]
+  },
+  {
+    "nome": "git-replace",
+    "descricao": "Cria, lista ou deleta referências de substituição.",
+    "uso": "Permite que um objeto seja substituído por outro em todo o repositório, sem alterar o ID (hash) original do objeto, útil para corrigir commits ou histórico.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-replace",
+    "exemplos": [
+      "git replace <hash-errado> <hash-correto>",
+      "git replace -l",
+      "git replace -d <hash-errado>"
+    ]
+  },
+  {
+    "nome": "git-annotate",
+    "descricao": "Mostra quem alterou o quê, linha por linha (Alias para 'git blame').",
+    "uso": "Exibe o histórico de modificação de cada linha em um arquivo, mostrando o hash do commit e o autor que introduziu aquela linha.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-annotate",
+    "exemplos": [
+      "git annotate arquivo.js",
+      "git annotate -L 10,20 arquivo.js"
+    ]
+  },
+  {
+    "nome": "git-blame",
+    "descricao": "Mostra quem alterou o quê, linha por linha (real name).",
+    "uso": "O comando principal para visualizar o histórico de autoria linha por linha em um arquivo específico, crucial para depuração de código.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-blame",
+    "exemplos": [
+      "git blame arquivo.py",
+      "git blame -s arquivo.py"
+    ]
+  },
+  {
+    "nome": "git-bugreport",
+    "descricao": "Coleta informações para relatar um bug no Git.",
+    "uso": "Automatiza a coleta de dados de ambiente, configurações e logs de repositório que são cruciais para desenvolvedores do Git diagnostiquem problemas.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-bugreport",
+    "exemplos": [
+      "git bugreport",
+      "git bugreport -o report.txt"
+    ]
+  },
+  {
+    "nome": "git-count-objects",
+    "descricao": "Conta o número de objetos soltos e empacotados não alcançáveis.",
+    "uso": "Mostra o tamanho do banco de dados de objetos do repositório, incluindo quantos objetos estão soltos e quantos estão dentro de arquivos de pack.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-count-objects",
+    "exemplos": [
+      "git count-objects -v"
+    ]
+  },
+  {
+    "nome": "git-diagnose",
+    "descricao": "Coleta e exibe informações de diagnóstico sobre o repositório e o ambiente.",
+    "uso": "Semelhante ao 'bugreport', mas focado em fornecer um instantâneo do estado atual do repositório e da configuração do Git para fins de diagnóstico.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-diagnose",
+    "exemplos": [
+      "git diagnose"
+    ]
+  },
+  {
+    "nome": "git-difftool",
+    "descricao": "Mostra as diferenças usando ferramentas de diff externas.",
+    "uso": "Abre uma ferramenta visual de diff configurada (como 'meld' ou 'Beyond Compare') para comparar arquivos entre commits ou no diretório de trabalho.",
+    "tipo": "Comando Interativo (REPLs)",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-difftool",
+    "exemplos": [
+      "git difftool HEAD^ HEAD",
+      "git difftool --dir-diff"
+    ]
+  },
+  {
+    "nome": "git-fsck",
+    "descricao": "Verifica a conectividade e validade dos objetos no banco de dados.",
+    "uso": "Audita o banco de dados Git para garantir a integridade. Reporta objetos corrompidos, commits inacessíveis ou referências quebradas.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-fsck",
+    "exemplos": [
+      "git fsck --full",
+      "git fsck --lost-found"
+    ]
+  },
+  {
+    "nome": "git-help",
+    "descricao": "Mostra informações de ajuda sobre o Git.",
+    "uso": "Acessa a documentação (man pages) de comandos Git específicos ou lista os comandos disponíveis.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-help",
+    "exemplos": [
+      "git help commit",
+      "git help -a"
+    ]
+  },
+  {
+    "nome": "git-instaweb",
+    "descricao": "Navegue pelo seu repositório instantaneamente no gitweb.",
+    "uso": "Configura e inicia um servidor web local (como lighttpd ou webrick) para hospedar uma interface gitweb temporária para o repositório atual.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://git-scm.com/docs/git-instaweb",
+    "exemplos": [
+      "git instaweb",
+      "git instaweb --httpd=mongoose"
+    ]
+  },
+  {
+    "nome": "git-merge-tree",
+    "descricao": "Mostra o resultado do merge de três árvores.",
+    "uso": "Comando de baixo nível que executa a lógica de merge triplo entre três referências de árvore (base, lado A, lado B), mostrando o resultado sem realmente fazer o merge.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-merge-tree",
+    "exemplos": [
+      "git merge-tree <base> <branchA> <branchB>"
+    ]
+  },
+  {
+    "nome": "git-rerere",
+    "descricao": "Reúsa gravações de resoluções de conflitos (Reusable Recording of Resolved Conflicts).",
+    "uso": "Grava como você resolveu um conflito de merge e o reutiliza automaticamente se o Git encontrar o mesmo conflito novamente, acelerando merges repetidos.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-rerere",
+    "exemplos": [
+      "git config --global rerere.enabled true",
+      "git rerere forget <arquivo>"
+    ]
+  },
+  {
+    "nome": "git-show-branch",
+    "descricao": "Mostra as branches e seus commits de forma concisa.",
+    "uso": "Exibe os commits que pertencem a múltiplas branches, facilitando a visualização de onde elas divergiram e como se cruzam.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-show-branch",
+    "exemplos": [
+      "git show-branch main develop feature",
+      "git show-branch --topo-order"
+    ]
+  },
+  {
+    "nome": "git-verify-commit",
+    "descricao": "Verifica a assinatura GPG de um commit.",
+    "uso": "Usado para validar a integridade e a autenticidade de um commit que foi assinado digitalmente com GPG.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-verify-commit",
+    "exemplos": [
+      "git verify-commit HEAD",
+      "git verify-commit <hash>"
+    ]
+  },
+  {
+    "nome": "git-verify-tag",
+    "descricao": "Verifica a assinatura GPG de uma tag.",
+    "uso": "Confirma que uma tag anotada foi assinada corretamente por uma chave GPG confiável, garantindo que a tag não foi adulterada.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-verify-tag",
+    "exemplos": [
+      "git verify-tag v1.0.0",
+      "git tag -v v1.2.3"
+    ]
+  },
+  {
+    "nome": "git-version",
+    "descricao": "Exibe a versão do Git em uso.",
+    "uso": "Simplesmente imprime a string da versão do software Git instalado, útil para fins de diagnóstico e compatibilidade.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-version",
+    "exemplos": [
+      "git version",
+      "git --version"
+    ]
+  },
+  {
+    "nome": "git-whatchanged",
+    "descricao": "Mostra logs com as diferenças que introduziram mudanças.",
+    "uso": "Similar ao 'git log -p', mas com um formato de saída mais conciso, listando o commit, o autor e os nomes dos arquivos modificados.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-whatchanged",
+    "exemplos": [
+      "git whatchanged -p --since='2 weeks ago'"
+    ]
+  },
+  {
+    "nome": "gitweb",
+    "descricao": "Interface web CGI para repositórios Git.",
+    "uso": "Um script CGI que fornece uma interface web baseada em navegador para visualizar repositórios Git, seu histórico e conteúdo.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/gitweb",
+    "exemplos": [
+      "Configurar gitweb no servidor web."
+    ]
+  },
+  {
+    "nome": "git-archimport",
+    "descricao": "Importa um repositório GNU Arch para o Git.",
+    "uso": "Ferramenta de migração que converte o histórico de um projeto gerenciado pelo GNU Arch para o formato de repositório Git.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://git-scm.com/docs/git-archimport",
+    "exemplos": [
+      "git archimport --root /path/to/arch/project"
+    ]
+  },
+  {
+    "nome": "git-cvsexportcommit",
+    "descricao": "Comando interno para exportar um commit para formato CVS.",
+    "uso": "Usado internamente pelo 'git cvsimport' e 'git cvsserver' para mapear e exportar commits Git como operações CVS.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://git-scm.com/docs/git-cvsexportcommit",
+    "exemplos": [
+      "git cvsexportcommit <hash>"
+    ]
+  },
+  {
+    "nome": "git-cvsimport",
+    "descricao": "Importa projetos CVS para um repositório Git.",
+    "uso": "Ferramenta de migração que converte um repositório CVS existente em um repositório Git completo com histórico.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://git-scm.com/docs/git-cvsimport",
+    "exemplos": [
+      "git cvsimport -k -r cvs_module"
+    ]
+  },
+  {
+    "nome": "git-cvsserver",
+    "descricao": "Emulação de um servidor CVS P-server.",
+    "uso": "Permite que clientes CVS legados acessem um repositório Git como se fosse um repositório CVS, facilitando a transição de usuários.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-cvsserver",
+    "exemplos": [
+      "git cvsserver pserver"
+    ]
+  },
+  {
+    "nome": "git-imap-send",
+    "descricao": "Envia uma coleção de patches de um stdin para uma pasta IMAP.",
+    "uso": "Facilita o envio de patches formatados por e-mail, utilizando o protocolo IMAP, comum em fluxos de trabalho de desenvolvimento baseados em patches.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://git-scm.com/docs/git-imap-send",
+    "exemplos": [
+      "git format-patch -3 | git imap-send"
+    ]
+  },
+  {
+    "nome": "git-p4",
+    "descricao": "Interface bidirecional entre Perforce e Git.",
+    "uso": "Permite que desenvolvedores trabalhem em um repositório Git, mas interajam com o servidor Perforce (P4) para buscar e submeter mudanças.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://git-scm.com/docs/git-p4",
+    "exemplos": [
+      "git p4 clone //depot/project",
+      "git p4 submit"
+    ]
+  },
+  {
+    "nome": "git-quiltimport",
+    "descricao": "Aplica um patch set de Quilt em uma branch Git.",
+    "uso": "Importa uma série de patches mantidos pelo sistema Quilt (geralmente usado em projetos Linux Kernel) e os aplica como commits Git.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://git-scm.com/docs/git-quiltimport",
+    "exemplos": [
+      "git quiltimport"
+    ]
+  },
+  {
+    "nome": "git-request-pull",
+    "descricao": "Gera um resumo de mudanças prontas para um pull.",
+    "uso": "Cria uma mensagem curta de pull request, ideal para ser enviada por e-mail, listando o URL do repositório e os commits a serem mesclados.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-request-pull",
+    "exemplos": [
+      "git request-pull origin/main url/meu-repo.git main"
+    ]
+  },
+  {
+    "nome": "git-send-email",
+    "descricao": "Envia patches formatados por e-mail.",
+    "uso": "Ferramenta robusta para enviar patches gerados por 'git format-patch' via SMTP, aderindo aos padrões de envio de listas de e-mail de código aberto.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://git-scm.com/docs/git-send-email",
+    "exemplos": [
+      "git send-email 0001-patch.patch",
+      "git send-email --to=\"lista@exemplo.com\" *.patch"
+    ]
+  },
+  {
+    "nome": "git-svn",
+    "descricao": "Interface bidirecional com repositórios Subversion.",
+    "uso": "Permite que um repositório Git funcione como um cliente Subversion, clonando e interagindo com repositórios SVN.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://git-scm.com/docs/git-svn",
+    "exemplos": [
+      "git svn clone svn://server/repo",
+      "git svn dcommit"
+    ]
+  },
+  {
+    "nome": "git-apply",
+    "descricao": "Aplica um patch para arquivos e/ou índice.",
+    "uso": "Aplica patches que podem ter sido gerados por 'git diff' ou ferramentas externas como o comando 'diff' do Unix.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-apply",
+    "exemplos": [
+      "git apply meu_patch.diff",
+      "git apply --check meu_patch.diff"
+    ]
+  },
+  {
+    "nome": "git-checkout-index",
+    "descricao": "Copia arquivos do índice para a árvore de trabalho.",
+    "uso": "Comando de baixo nível que move o conteúdo de arquivos rastreados no índice para o diretório de trabalho, ignorando o HEAD.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-checkout-index",
+    "exemplos": [
+      "git checkout-index -a -f --prefix=temp/"
+    ]
+  },
+  {
+    "nome": "git-commit-graph",
+    "descricao": "Comando utilitário para trabalhar com arquivos de grafo de commits.",
+    "uso": "Gera ou verifica um arquivo de grafo de commits, que acelera operações de histórico como 'git log' e 'git bisect' em repositórios grandes.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-commit-graph",
+    "exemplos": [
+      "git commit-graph write",
+      "git commit-graph verify"
+    ]
+  },
+  {
+    "nome": "git-commit-tree",
+    "descricao": "Cria um novo objeto de commit a partir de um objeto de árvore e pais.",
+    "uso": "Comando de baixo nível que gera um commit sem tocar no índice ou na árvore de trabalho. Requer o hash da árvore e dos commits pai.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-commit-tree",
+    "exemplos": [
+      "git commit-tree <hash-da-arvore> -p HEAD -m \"Novo commit\""
+    ]
+  },
+  {
+    "nome": "git-hash-object",
+    "descricao": "Calcula o ID de um objeto e opcionalmente o armazena no banco de dados.",
+    "uso": "Cria um objeto blob ou tree (com conteúdo arbitrário), calcula seu SHA-1/SHA-256 e o retorna. Essencial para a criação manual de objetos Git.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-hash-object",
+    "exemplos": [
+      "echo \"conteudo\" | git hash-object -w --stdin",
+      "git hash-object arquivo.txt"
+    ]
+  },
+  {
+    "nome": "git-index-pack",
+    "descricao": "Constrói o arquivo de índice de um arquivo de pack existente.",
+    "uso": "Cria o arquivo '.idx' correspondente para um arquivo '.pack'. O índice é necessário para acessar objetos de forma eficiente dentro do pack.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-index-pack",
+    "exemplos": [
+      "git index-pack meu_packfile.pack"
+    ]
+  },
+  {
+    "nome": "git-merge-file",
+    "descricao": "Executa o merge de três arquivos em um.",
+    "uso": "Aplica a lógica de merge triplo a três arquivos (o original, a versão local e a versão remota) e tenta resolver os conflitos automaticamente.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-merge-file",
+    "exemplos": [
+      "git merge-file local.txt base.txt remote.txt"
+    ]
+  },
+  {
+    "nome": "git-merge-index",
+    "descricao": "Roda merges em arquivos com conflitos no índice.",
+    "uso": "Comando interno usado para orquestrar a resolução de conflitos de merge, interagindo com o índice e invocando ferramentas de merge.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-merge-index",
+    "exemplos": [
+      "git merge-index git-merge-file ."
+    ]
+  },
+  {
+    "nome": "git-mktag",
+    "descricao": "Cria um objeto de tag assinado ou anotado.",
+    "uso": "Comando de baixo nível para criar o objeto de tag real no banco de dados, com a capacidade de incluir assinatura GPG.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-mktag",
+    "exemplos": [
+      "echo \"tag <info>\" | git mktag"
+    ]
+  },
+  {
+    "nome": "git-mktree",
+    "descricao": "Cria um objeto de árvore a partir da entrada de lista de formato aceito pelo 'git ls-tree'.",
+    "uso": "Constrói um objeto de árvore (diretório) a partir de uma lista de entradas (blobs ou outras árvores). Essencial para criar snapshots de diretórios.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-mktree",
+    "exemplos": [
+      "git ls-files | git mktree"
+    ]
+  },
+  {
+    "nome": "git-multi-pack-index",
+    "descricao": "Gerencia arquivos Multi-Pack Index (MIDX).",
+    "uso": "Cria e atualiza o arquivo MIDX, que permite que o Git acesse objetos de múltiplos arquivos de pack de forma mais eficiente, crucial para repositórios grandes.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-multi-pack-index",
+    "exemplos": [
+      "git multi-pack-index write",
+      "git multi-pack-index verify"
+    ]
+  },
+  {
+    "nome": "git-pack-objects",
+    "descricao": "Empacota objetos soltos em um arquivo de pack.",
+    "uso": "Comando de baixo nível que lê uma lista de objetos e os comprime em um único arquivo de pack para armazenamento e transferência eficientes.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-pack-objects",
+    "exemplos": [
+      "git rev-list --objects HEAD | git pack-objects /tmp/pack"
+    ]
+  },
+  {
+    "nome": "git-prune-packed",
+    "descricao": "Remove objetos soltos que já estão em arquivos de pack.",
+    "uso": "Limpa o banco de dados de objetos soltos redundantes após uma operação de 'git repack' ou 'git gc'.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-prune-packed",
+    "exemplos": [
+      "git prune-packed"
+    ]
+  },
+  {
+    "nome": "git-read-tree",
+    "descricao": "Lê informações de árvore para o índice.",
+    "uso": "Comando de baixo nível que carrega o conteúdo de um objeto de árvore (snapshot de um diretório) diretamente para o índice, substituindo o estado atual.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-read-tree",
+    "exemplos": [
+      "git read-tree HEAD",
+      "git read-tree --prefix=subdir <tree-hash>"
+    ]
+  },
+  {
+    "nome": "git-replay",
+    "descricao": "Reaplica patches de forma interna.",
+    "uso": "Utilitário interno usado pelo 'git am' e 'git rebase' para gerenciar a aplicação de patches commit por commit.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-replay",
+    "exemplos": [
+      "git replay --continue"
+    ]
+  },
+  {
+    "nome": "git-symbolic-ref",
+    "descricao": "Lê e atualiza referências simbólicas.",
+    "uso": "Manipula referências que apontam para outras referências (como HEAD apontando para refs/heads/main).",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-symbolic-ref",
+    "exemplos": [
+      "git symbolic-ref HEAD",
+      "git symbolic-ref refs/heads/nova-branch refs/heads/main"
+    ]
+  },
+  {
+    "nome": "git-unpack-objects",
+    "descricao": "Desempacota objetos de um arquivo de pack para o banco de dados.",
+    "uso": "Extrai objetos de um arquivo de pack (geralmente recebido por push ou fetch) e os armazena como objetos soltos no repositório.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-unpack-objects",
+    "exemplos": [
+      "cat packfile.pack | git unpack-objects"
+    ]
+  },
+  {
+    "nome": "git-update-index",
+    "descricao": "Registra conteúdo da árvore de trabalho em arquivos de índice.",
+    "uso": "Comando de baixo nível para adicionar, remover ou modificar entradas no índice (staging area), usado por 'git add' e outras ferramentas de alto nível.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-update-index",
+    "exemplos": [
+      "git update-index --add arquivo.txt",
+      "git update-index --refresh"
+    ]
+  },
+  {
+    "nome": "git-update-ref",
+    "descricao": "Atualiza o nome do objeto apontado por uma referência.",
+    "uso": "Comando atômico e seguro para mover referências (branches, tags) para um novo hash de commit.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-update-ref",
+    "exemplos": [
+      "git update-ref refs/heads/main <novo-hash>",
+      "git update-ref -d refs/heads/antiga"
+    ]
+  },
+  {
+    "nome": "git-write-tree",
+    "descricao": "Cria um objeto de árvore a partir do estado atual do índice.",
+    "uso": "Pega o snapshot completo representado no índice e o salva como um objeto de árvore no banco de dados. Este hash de árvore é usado para criar commits.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-write-tree",
+    "exemplos": [
+      "git write-tree"
+    ]
+  },
+  {
+    "nome": "git-cat-file",
+    "descricao": "Fornece conteúdo ou tipo de objetos do repositório.",
+    "uso": "Ferramenta de diagnóstico crucial de baixo nível. Permite inspecionar o conteúdo bruto de objetos Git (blobs, árvores, commits, tags) usando seu hash.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-cat-file",
+    "exemplos": [
+      "git cat-file -t HEAD",
+      "git cat-file -p HEAD",
+      "git cat-file blob <hash-do-blob>"
+    ]
+  },
+  {
+    "nome": "git-cherry",
+    "descricao": "Encontra commits que não foram aplicados no upstream.",
+    "uso": "Compara commits entre duas branches e lista quais commits na branch atual ainda não foram mesclados ou 'cherry-picked' na branch de destino (upstream).",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-cherry",
+    "exemplos": [
+      "git cherry main feature-branch",
+      "git cherry -v"
+    ]
+  },
+  {
+    "nome": "git-diff-files",
+    "descricao": "Compara arquivos da árvore de trabalho com o índice.",
+    "uso": "Gera um diff das mudanças que estão na árvore de trabalho, mas ainda não foram adicionadas ao índice (unstaged changes).",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-diff-files",
+    "exemplos": [
+      "git diff-files"
+    ]
+  },
+  {
+    "nome": "git-diff-index",
+    "descricao": "Compara uma árvore ou commit com o índice.",
+    "uso": "Mostra a diferença entre um commit específico (ou HEAD) e o estado atual do índice (staging area).",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-diff-index",
+    "exemplos": [
+      "git diff-index --cached HEAD"
+    ]
+  },
+  {
+    "nome": "git-diff-pairs",
+    "descricao": "Comando interno para processar pares de diferenças.",
+    "uso": "Utilitário interno de baixo nível usado para otimizar o cálculo de diferenças entre árvores. Não é destinado ao uso direto pelo usuário.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-diff-pairs",
+    "exemplos": [
+      "Uso interno do Git"
+    ]
+  },
+  {
+    "nome": "git-diff-tree",
+    "descricao": "Compara as entradas de duas árvores (commits ou árvores).",
+    "uso": "Mostra a diferença entre o snapshot de dois commits diferentes, listando as mudanças de arquivos e diretórios.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-diff-tree",
+    "exemplos": [
+      "git diff-tree -r HEAD HEAD^",
+      "git diff-tree --name-status <hash1> <hash2>"
+    ]
+  },
+  {
+    "nome": "git-for-each-ref",
+    "descricao": "Saída formatada de informações sobre referências (refs).",
+    "uso": "Gera uma lista formatada de branches, tags ou outros refs, permitindo scripts e relatórios detalhados sobre as referências do repositório.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-for-each-ref",
+    "exemplos": [
+      "git for-each-ref --format='%(refname) %(objectname)' refs/heads",
+      "git for-each-ref --sort=-committerdate --count=10"
+    ]
+  },
+  {
+    "nome": "git-for-each-repo",
+    "descricao": "Roda um comando em uma lista de repositórios.",
+    "uso": "Facilita a execução de scripts ou comandos Git em uma coleção de repositórios, especialmente útil em ambientes multi-repositório.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-for-each-repo",
+    "exemplos": [
+      "git for-each-repo --all git fetch"
+    ]
+  },
+  {
+    "nome": "git-get-tar-commit-id",
+    "descricao": "Extrai o ID do commit de um tarfile criado pelo git-archive.",
+    "uso": "Recupera o hash de commit original de um arquivo compactado que foi gerado usando 'git archive', garantindo a rastreabilidade da fonte.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-get-tar-commit-id",
+    "exemplos": [
+      "git get-tar-commit-id < archive.tar"
+    ]
+  },
+  {
+    "nome": "git-last-modified",
+    "descricao": "Mostra o último momento em que um arquivo foi modificado (utilitário interno).",
+    "uso": "Utilitário de baixo nível para determinar o timestamp da última modificação de um arquivo no repositório, frequentemente usado em scripts.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-last-modified",
+    "exemplos": [
+      "git last-modified arquivo.txt"
+    ]
+  },
+  {
+    "nome": "git-ls-files",
+    "descricao": "Mostra informações sobre arquivos no índice e na árvore de trabalho.",
+    "uso": "Lista arquivos rastreados, arquivos em conflito, ou arquivos não rastreados, dependendo das opções fornecidas. Essencial para inspecionar o índice.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-ls-files",
+    "exemplos": [
+      "git ls-files",
+      "git ls-files -u (arquivos em conflito)",
+      "git ls-files -o (não rastreados)"
+    ]
+  },
+  {
+    "nome": "git-ls-remote",
+    "descricao": "Lista referências em um repositório remoto.",
+    "uso": "Exibe as branches e tags disponíveis em um repositório remoto sem realmente baixá-las ('fetch'), útil para verificar o estado de um servidor.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://git-scm.com/docs/git-ls-remote",
+    "exemplos": [
+      "git ls-remote origin",
+      "git ls-remote https://github.com/git/git.git refs/heads/main"
+    ]
+  },
+  {
+    "nome": "git-ls-tree",
+    "descricao": "Lista o conteúdo de um objeto de árvore (diretório).",
+    "uso": "Comando de baixo nível que inspeciona o conteúdo de um objeto de árvore (diretório em um commit), mostrando seus modos, tipos e hashes de conteúdo.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-ls-tree",
+    "exemplos": [
+      "git ls-tree HEAD",
+      "git ls-tree -r main"
+    ]
+  },
+  {
+    "nome": "git-merge-base",
+    "descricao": "Encontra o melhor ponto ancestral comum entre dois commits.",
+    "uso": "Determina o commit que é o ponto de divergência mais recente entre as histórias de dois ou mais commits, fundamental para operações de merge.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-merge-base",
+    "exemplos": [
+      "git merge-base main feature",
+      "git merge-base --octopus main f1 f2 f3"
+    ]
+  },
+  {
+    "nome": "git-name-rev",
+    "descricao": "Encontra nomes simbólicos para hashes de commits dados.",
+    "uso": "Traduz um hash de commit bruto para um nome legível (por exemplo, main~5 ou v2.0.0-15-gabcdef), usando referências próximas.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-name-rev",
+    "exemplos": [
+      "git name-rev --name-only <hash>"
+    ]
+  },
+  {
+    "nome": "git-pack-redundant",
+    "descricao": "Encontra arquivos de pack redundantes.",
+    "uso": "Identifica arquivos de pack que não são mais necessários porque todos os seus objetos estão contidos em arquivos de pack mais recentes ou otimizados.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-pack-redundant",
+    "exemplos": [
+      "git pack-redundant"
+    ]
+  },
+  {
+    "nome": "git-repo",
+    "descricao": "Utilitário interno de baixo nível relacionado a repositórios.",
+    "uso": "Comando de uso interno, geralmente associado à manipulação de caminhos e propriedades de repositórios em scripts Git.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-repo",
+    "exemplos": [
+      "Utilizado por scripts internos."
+    ]
+  },
+  {
+    "nome": "git-rev-list",
+    "descricao": "Lista commits em ordem cronológica reversa.",
+    "uso": "Principal ferramenta de baixo nível para atravessar o histórico do Git, listando hashes de commit que satisfazem um determinado conjunto de critérios.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-rev-list",
+    "exemplos": [
+      "git rev-list HEAD --count",
+      "git rev-list --max-count=5 main"
+    ]
+  },
+  {
+    "nome": "git-rev-parse",
+    "descricao": "Escolhe e formata referências ou entrada de revisão.",
+    "uso": "Comando essencial de baixo nível para converter referências (como branches, tags ou nomes relativos) em seus hashes SHA-1/SHA-256 completos.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-rev-parse",
+    "exemplos": [
+      "git rev-parse HEAD",
+      "git rev-parse --show-toplevel",
+      "git rev-parse --short HEAD"
+    ]
+  },
+  {
+    "nome": "git-show-index",
+    "descricao": "Mostra o índice de um arquivo de pack.",
+    "uso": "Exibe o conteúdo estrutural de um arquivo de índice (.idx) que mapeia objetos para offsets dentro de um arquivo de pack correspondente.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-show-index",
+    "exemplos": [
+      "git show-index < packfile.idx"
+    ]
+  },
+  {
+    "nome": "git-show-ref",
+    "descricao": "Lista hashes e nomes de referências (refs).",
+    "uso": "Exibe referências (branches, tags, remotes) de forma crua, mostrando o hash completo e o nome da referência.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-show-ref",
+    "exemplos": [
+      "git show-ref",
+      "git show-ref --heads",
+      "git show-ref main"
+    ]
+  },
+  {
+    "nome": "git-unpack-file",
+    "descricao": "Cria um arquivo temporário com o conteúdo de um blob.",
+    "uso": "Comando interno usado para extrair o conteúdo de um objeto blob do banco de dados Git para um arquivo no sistema de arquivos.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-unpack-file",
+    "exemplos": [
+      "git unpack-file <blob-hash>"
+    ]
+  },
+  {
+    "nome": "git-var",
+    "descricao": "Mostra uma variável de objeto do Git.",
+    "uso": "Utilitário para extrair informações de variáveis internas do Git, como as propriedades do objeto 'user.email' ou 'GIT_COMMITTER_IDENT'.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-var",
+    "exemplos": [
+      "git var GIT_AUTHOR_IDENT",
+      "git var GIT_COMMITTER_IDENT"
+    ]
+  },
+  {
+    "nome": "git-verify-pack",
+    "descricao": "Valida os arquivos de pack e de índice.",
+    "uso": "Verifica a integridade estrutural e o checksum de um arquivo de pack e seu índice correspondente.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-verify-pack",
+    "exemplos": [
+      "git verify-pack -v meu_packfile.pack"
+    ]
+  },
+  {
+    "nome": "git-daemon",
+    "descricao": "Um servidor de rede Git sem autenticação.",
+    "uso": "Roda um servidor TCP que serve repositórios Git usando o protocolo Git nativo (port 9418), geralmente para acesso anônimo de leitura.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-daemon",
+    "exemplos": [
+      "git daemon --base-path=/srv/git --export-all"
+    ]
+  },
+  {
+    "nome": "git-fetch-pack",
+    "descricao": "Busca objetos de outro repositório via protocolo Git.",
+    "uso": "Comando de baixo nível para buscar objetos e referências de um repositório remoto, empacotando-os para transferência. Usado internamente por 'git fetch'.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://git-scm.com/docs/git-fetch-pack",
+    "exemplos": [
+      "git fetch-pack git://server/repo.git HEAD"
+    ]
+  },
+  {
+    "nome": "git-http-backend",
+    "descricao": "Implementação CGI para o protocolo Git sobre HTTP.",
+    "uso": "Um script que permite que o Git seja acessado via HTTP/S, suportando 'git fetch' e 'git push' (se configurado) através de um servidor web.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-http-backend",
+    "exemplos": [
+      "Configuração em Apache/Nginx como handler CGI."
+    ]
+  },
+  {
+    "nome": "git-send-pack",
+    "descricao": "Transfere objetos e referências para outro repositório.",
+    "uso": "Comando de baixo nível que executa o lado do cliente do protocolo de push. Usado internamente por 'git push'.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://git-scm.com/docs/git-send-pack",
+    "exemplos": [
+      "git send-pack ssh://server/repo.git main"
+    ]
+  },
+  {
+    "nome": "git-update-server-info",
+    "descricao": "Atualiza o arquivo de informações auxiliares para servidores burros (HTTP não empacotado).",
+    "uso": "Cria ou atualiza arquivos necessários para que clientes possam fazer fetch de um repositório servido por HTTP sem o protocolo de pack (servidor 'burro').",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-update-server-info",
+    "exemplos": [
+      "git update-server-info"
+    ]
+  },
+  {
+    "nome": "git-http-fetch",
+    "descricao": "Busca repositórios via HTTP.",
+    "uso": "Comando de baixo nível para realizar a operação 'fetch' usando o protocolo HTTP/S. Usado por 'git fetch' quando configurado para usar HTTP.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://git-scm.com/docs/git-http-fetch",
+    "exemplos": [
+      "git http-fetch <url> <hash-de-ref>"
+    ]
+  },
+  {
+    "nome": "git-http-push",
+    "descricao": "Envia para repositórios via HTTP.",
+    "uso": "Comando de baixo nível para realizar a operação 'push' usando o protocolo HTTP/S. Usado por 'git push' em ambientes compatíveis com WebDAV.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://git-scm.com/docs/git-http-push",
+    "exemplos": [
+      "git http-push <url> <ref>"
+    ]
+  },
+  {
+    "nome": "git-receive-pack",
+    "descricao": "Recebe o push de um cliente.",
+    "uso": "Comando de baixo nível que roda no lado do servidor. Ele recebe objetos e referências do cliente e atualiza as referências locais. Invocado por SSH ou 'git daemon'.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-receive-pack",
+    "exemplos": [
+      "Invocado remotamente por 'git push'."
+    ]
+  },
+  {
+    "nome": "git-shell",
+    "descricao": "Shell restrito para acesso de repositório Git interativo via SSH.",
+    "uso": "Usado como um shell de login para usuários SSH que só precisam interagir com o Git (fetch/push), prevenindo o acesso shell completo ao servidor.",
+    "tipo": "Comando Interativo (REPLs)",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-shell",
+    "exemplos": [
+      "Configurado como shell de login no /etc/passwd."
+    ]
+  },
+  {
+    "nome": "git-upload-archive",
+    "descricao": "Servidor de lado remoto para 'git archive --remote'.",
+    "uso": "Comando que roda no lado do servidor para enviar um arquivo (tar/zip) de um commit específico para um cliente remoto.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-upload-archive",
+    "exemplos": [
+      "Invocado remotamente por 'git archive --remote'."
+    ]
+  },
+  {
+    "nome": "git-upload-pack",
+    "descricao": "Envia objetos empacotados para um cliente.",
+    "uso": "Comando que roda no lado do servidor para responder a um 'git fetch' ou 'git clone', empacotando e enviando os objetos e referências solicitados.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-upload-pack",
+    "exemplos": [
+      "Invocado remotamente por 'git fetch'."
+    ]
+  },
+  {
+    "nome": "git-check-attr",
+    "descricao": "Mostra informações de atributos do Git (e.g., binário, text, diff).",
+    "uso": "Consulta e exibe os valores de atributos definidos em arquivos '.gitattributes' para caminhos específicos.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-check-attr",
+    "exemplos": [
+      "git check-attr diff -- arquivo.bin",
+      "git check-attr filter --all"
+    ]
+  },
+  {
+    "nome": "git-check-ignore",
+    "descricao": "Debuga e mostra caminhos ignorados pelo .gitignore.",
+    "uso": "Ajuda a determinar por que um determinado arquivo é (ou não é) ignorado pelo Git, mostrando o padrão e o arquivo .gitignore responsável.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-check-ignore",
+    "exemplos": [
+      "git check-ignore -v temp/log.txt",
+      "git check-ignore --list"
+    ]
+  },
+  {
+    "nome": "git-check-mailmap",
+    "descricao": "Verifica nomes e endereços de e-mail de colaboradores.",
+    "uso": "Processa uma lista de contribuições e mapeia autores e endereços antigos ou incorretos para os corretos, usando o arquivo '.mailmap'.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-check-mailmap",
+    "exemplos": [
+      "git check-mailmap \"Nome Antigo <antigo@email.com>\"",
+      "git log --use-mailmap"
+    ]
+  },
+  {
+    "nome": "git-check-ref-format",
+    "descricao": "Garante que um nome de referência seja bem formado.",
+    "uso": "Verifica se uma string segue as regras estritas de nomenclatura de referências do Git (branches, tags, remotes), prevenindo problemas de compatibilidade.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-check-ref-format",
+    "exemplos": [
+      "git check-ref-format --normalize refs/heads/feature/nova-branch"
+    ]
+  },
+  {
+    "nome": "git-column",
+    "descricao": "Exibe dados em colunas.",
+    "uso": "Utilitário simples que formata a entrada de texto em múltiplas colunas, frequentemente usado para melhorar a legibilidade de comandos de saída do Git (como 'git branch').",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-column",
+    "exemplos": [
+      "git branch | git column",
+      "git column --mode=dense"
+    ]
+  },
+  {
+    "nome": "git-credential",
+    "descricao": "Auxiliar de interface para armazenamento e recuperação de credenciais.",
+    "uso": "Comando principal que interage com os auxiliares de credencial configurados (como 'cache' ou 'store') para armazenar senhas de repositórios remotos.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://git-scm.com/docs/git-credential",
+    "exemplos": [
+      "git credential fill",
+      "git credential reject"
+    ]
+  },
+  {
+    "nome": "git-credential-cache",
+    "descricao": "Armazena credenciais em memória por um curto período de tempo.",
+    "uso": "É um auxiliar de credencial que armazena temporariamente senhas em cache, de modo que o usuário não precise digitá-las a cada operação de rede (fetch/pull/push). Expira automaticamente após um período configurável.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://git-scm.com/docs/git-credential-cache",
+    "exemplos": [
+      "git config --global credential.helper cache",
+      "git config credential.cache.timeout 3600"
+    ]
+  },
+  {
+    "nome": "git-credential-store",
+    "descricao": "Armazena credenciais permanentemente no disco em texto simples.",
+    "uso": "Um auxiliar de credencial que armazena credenciais de forma persistente (mas insegura) em um arquivo de texto no disco. Útil para automação, mas **não é recomendado** para senhas sensíveis.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://git-scm.com/docs/git-credential-store",
+    "exemplos": [
+      "git config --global credential.helper store"
+    ]
+  },
+  {
+    "nome": "git-fmt-merge-msg",
+    "descricao": "Gera uma mensagem padrão para um commit de merge.",
+    "uso": "Comando de baixo nível que lê as informações de merge do Git e gera o texto padrão para a mensagem de commit de merge, incluindo as linhas de 'Merge branch...' e o cabeçalho 'Conflicts:'.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-fmt-merge-msg",
+    "exemplos": [
+      "git fmt-merge-msg"
+    ]
+  },
+  {
+    "nome": "git-hook",
+    "descricao": "Comando de uso interno para executar hooks do Git.",
+    "uso": "Usado pela infraestrutura do Git para invocar scripts de hook (pré-commit, post-receive, etc.) em momentos específicos. Raramente invocado diretamente pelo usuário.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-hook",
+    "exemplos": [
+      "git hook pre-commit"
+    ]
+  },
+  {
+    "nome": "git-interpret-trailers",
+    "descricao": "Ajuda a adicionar ou analisar informações de rodapé (trailers) em mensagens de commit.",
+    "uso": "Adiciona linhas de metadados padronizadas (como 'Signed-off-by:', 'Co-authored-by:') ao final de uma mensagem de commit, seguindo o formato key-value.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-interpret-trailers",
+    "exemplos": [
+      "git interpret-trailers --in-place <msg_file>",
+      "git log --format='%(trailers)'"
+    ]
+  },
+  {
+    "nome": "git-mailinfo",
+    "descricao": "Extrai uma mensagem de patch de um e-mail.",
+    "uso": "Comando de baixo nível que analisa o conteúdo de um e-mail formatado (geralmente gerado por 'git format-patch') e separa a mensagem de commit do próprio patch (diff). Usado por 'git am'.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-mailinfo",
+    "exemplos": [
+      "git mailinfo <msg_file> <patch_file>"
+    ]
+  },
+  {
+    "nome": "git-mailsplit",
+    "descricao": "Divide um arquivo mbox ou um fluxo stdin em arquivos de mensagens.",
+    "uso": "Pega um arquivo grande contendo várias mensagens de e-mail (como um mbox) e o divide em arquivos individuais, um para cada patch. Usado antes de 'git am'.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-mailsplit",
+    "exemplos": [
+      "git mailsplit -o /tmp/patches < patches.mbox",
+      "git mailsplit -f < start_msg_id"
+    ]
+  },
+  {
+    "nome": "git-merge-one-file",
+    "descricao": "Executa um merge de três vias em um único arquivo.",
+    "uso": "Comando de baixo nível que implementa a lógica de merge em um arquivo, usando a versão base, a versão local e a versão remota. Usado internamente por 'git merge'.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-merge-one-file",
+    "exemplos": [
+      "git merge-one-file <base> <local> <remote>"
+    ]
+  },
+  {
+    "nome": "git-patch-id",
+    "descricao": "Computa um ID único para um patch.",
+    "uso": "Gera um hash que representa a essência de um patch, permitindo identificar se dois patches, mesmo que em commits diferentes, introduzem exatamente a mesma alteração. Usado por 'git am' e 'git cherry'.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-patch-id",
+    "exemplos": [
+      "git format-patch -1 HEAD | git patch-id"
+    ]
+  },
+  {
+    "nome": "git-sh-i18n",
+    "descricao": "Funções de shell para internacionalização (i18n) em scripts do Git.",
+    "uso": "Conjunto de funções de shell usadas dentro dos próprios scripts do Git para suportar tradução de mensagens de erro e saída para diferentes idiomas.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-sh-i18n",
+    "exemplos": [
+      "Utilizado internamente em scripts do Git."
+    ]
+  },
+  {
+    "nome": "git-sh-setup",
+    "descricao": "Funções de shell comuns usadas pelos comandos do Git escritos em shell script.",
+    "uso": "Fornece utilitários e funções básicas (como manipulação de caminhos, verificação de ambiente) para que outros comandos Git baseados em shell possam ser executados corretamente.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-sh-setup",
+    "exemplos": [
+      "Utilizado internamente em scripts do Git."
+    ]
+  },
+  {
+    "nome": "git-stripspace",
+    "descricao": "Remove espaços em branco indesejados (excessivos, finais) de uma entrada de texto.",
+    "uso": "Processa mensagens (geralmente mensagens de commit ou logs) para normalizar a formatação, removendo linhas vazias excessivas e espaços em branco desnecessários. Usado por 'git commit'.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://git-scm.com/docs/git-stripspace",
+    "exemplos": [
+      "echo 'Mensagem com espaço ' | git stripspace"
+    ]
+  },
+  {
+    "nome": "ls",
+    "descricao": "Lista o conteúdo de um diretório.",
+    "uso": "Utilizado para visualizar os arquivos e subdiretórios presentes em um caminho específico. É fundamental para navegação e inspeção do sistema de arquivos.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/ls.1.html",
+    "exemplos": [
+      "ls -lha",
+      "ls /etc",
+      "ls *.txt"
+    ]
+  },
+  {
+    "nome": "cd",
+    "descricao": "Muda o diretório de trabalho atual.",
+    "uso": "Comando essencial para navegar pelo sistema de arquivos. Permite entrar, sair ou retornar ao diretório home do usuário.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/cd.1p.html",
+    "exemplos": [
+      "cd /home/usuario/Documentos",
+      "cd ..",
+      "cd ~"
+    ]
+  },
+  {
+    "nome": "pwd",
+    "descricao": "Imprime o caminho completo do diretório de trabalho atual.",
+    "uso": "Utilizado para saber exatamente em qual diretório dentro da estrutura de arquivos o usuário está localizado.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/pwd.1.html",
+    "exemplos": [
+      "pwd",
+      "pwd -L"
+    ]
+  },
+  {
+    "nome": "mkdir",
+    "descricao": "Cria um novo diretório.",
+    "uso": "Usado para estruturar o sistema de arquivos criando pastas. O uso da flag '-p' permite criar diretórios pais se eles não existirem.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/mkdir.1.html",
+    "exemplos": [
+      "mkdir novo_projeto",
+      "mkdir -p backup/dados/hoje",
+      "mkdir 'Pasta com Espaços'"
+    ]
+  },
+  {
+    "nome": "rm",
+    "descricao": "Remove arquivos ou diretórios.",
+    "uso": "Comando usado para deletar permanentemente arquivos e diretórios. Deve ser usado com cautela, especialmente com as flags '-r' (recursivo) e '-f' (forçar).",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/rm.1.html",
+    "exemplos": [
+      "rm arquivo.txt",
+      "rm -r pasta_antiga",
+      "rm -rf cache/*"
+    ]
+  },
+  {
+    "nome": "cp",
+    "descricao": "Copia arquivos e diretórios.",
+    "uso": "Cria duplicatas de arquivos ou diretórios para um novo local. É comum usar a flag '-r' para copiar diretórios recursivamente.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/cp.1.html",
+    "exemplos": [
+      "cp arquivo.origem arquivo.destino",
+      "cp -r pasta_origem /destino/nova_pasta",
+      "cp -v * /backup"
+    ]
+  },
+  {
+    "nome": "cat",
+    "descricao": "Concatena arquivos e exibe seu conteúdo no terminal.",
+    "uso": "Comumente usado para exibir rapidamente o conteúdo de arquivos de texto pequenos no console. Também pode ser usado para criar ou concatenar arquivos.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/cat.1.html",
+    "exemplos": [
+      "cat /etc/hosts",
+      "cat arquivo1.txt arquivo2.txt > arquivo_combinado.txt",
+      "cat -n codigo.js"
+    ]
+  },
+  {
+    "nome": "grep",
+    "descricao": "Pesquisa por linhas que correspondam a um padrão específico em arquivos.",
+    "uso": "Ferramenta poderosa para filtragem e busca de texto. Essencial para análise de logs, código-fonte e saída de outros comandos.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/grep.1.html",
+    "exemplos": [
+      "grep 'erro' logfile.txt",
+      "ps aux | grep nginx",
+      "grep -v 'ignorar' configuracao.ini"
+    ]
+  },
+  {
+    "nome": "find",
+    "descricao": "Busca arquivos no sistema de diretórios com base em critérios definidos.",
+    "uso": "Permite encontrar arquivos por nome, tipo, data de modificação, tamanho ou permissões em um local de pesquisa especificado.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/find.1.html",
+    "exemplos": [
+      "find . -name '*.log'",
+      "find /var/log -type f -size +10M",
+      "find /home -user joao -delete"
+    ]
+  },
+  {
+    "nome": "man",
+    "descricao": "Exibe a página de manual (documentation) de um comando.",
+    "uso": "A principal ferramenta para obter informações detalhadas sobre a sintaxe, opções e uso de qualquer comando de sistema.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/man.1.html",
+    "exemplos": [
+      "man ls",
+      "man 5 passwd",
+      "man -k keyword"
+    ]
+  },
+  {
+    "nome": "sudo",
+    "descricao": "Executa um comando como superusuário ou outro usuário especificado.",
+    "uso": "Permite que usuários autorizados executem comandos com privilégios de root, garantindo segurança ao evitar o login direto como root.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man8/sudo.8.html",
+    "exemplos": [
+      "sudo apt update",
+      "sudo reboot",
+      "sudo -u outro_usuario touch arquivo_dele.txt"
+    ]
+  },
+  {
+    "nome": "apt",
+    "descricao": "Ferramenta de linha de comando para gerenciar pacotes no Debian e derivados (como Ubuntu).",
+    "uso": "Usado para instalar, remover, atualizar e gerenciar pacotes de software no sistema operacional.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Linux"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://manpages.ubuntu.com/manpages/jammy/man8/apt.8.html",
+    "exemplos": [
+      "sudo apt install htop",
+      "sudo apt update && sudo apt upgrade",
+      "apt search firefox"
+    ]
+  },
+  {
+    "nome": "ps",
+    "descricao": "Exibe informações sobre os processos ativos no sistema.",
+    "uso": "Usado para listar processos e obter detalhes como PID (ID do Processo), uso de CPU e memória, e tempo de execução.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/ps.1.html",
+    "exemplos": [
+      "ps aux",
+      "ps -ef",
+      "ps -p 1234"
+    ]
+  },
+  {
+    "nome": "kill",
+    "descricao": "Envia um sinal para um processo (geralmente para encerrá-lo).",
+    "uso": "Permite controlar a execução de processos, podendo interrompê-los (SIGTERM), forçar o encerramento imediato (SIGKILL) ou pausá-los.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/kill.1.html",
+    "exemplos": [
+      "kill 12345",
+      "kill -9 54321",
+      "kill -TERM $(pgrep nome_do_app)"
+    ]
+  },
+  {
+    "nome": "top",
+    "descricao": "Exibe uma visão dinâmica e em tempo real dos processos do sistema.",
+    "uso": "Ferramenta interativa para monitorar o uso de recursos do sistema (CPU, memória) e a atividade dos processos mais ativos.",
+    "tipo": "Comando Interativo (REPLs)",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/top.1.html",
+    "exemplos": [
+      "top",
+      "top -u root"
+    ]
+  },
+  {
+    "nome": "df",
+    "descricao": "Reporta o uso de espaço em disco dos sistemas de arquivos.",
+    "uso": "Utilizado para verificar o espaço livre e ocupado em partições montadas, sendo a flag '-h' (human-readable) a mais comum.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/df.1.html",
+    "exemplos": [
+      "df -h",
+      "df -T",
+      "df /home"
+    ]
+  },
+  {
+    "nome": "ping",
+    "descricao": "Testa a conectividade de rede com um host remoto usando pacotes ICMP.",
+    "uso": "Ferramenta básica para diagnóstico de rede, verificando se um host está acessível e medindo o tempo de latência (RTT).",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man8/ping.8.html",
+    "exemplos": [
+      "ping google.com",
+      "ping 192.168.1.1 -c 5",
+      "ping -i 2 localhost"
+    ]
+  },
+  {
+    "nome": "curl",
+    "descricao": "Ferramenta para transferir dados de ou para um servidor, usando vários protocolos.",
+    "uso": "Amplamente usado para fazer requisições HTTP/HTTPS, testar APIs e baixar arquivos via linha de comando.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://curl.se/docs/manpage.html",
+    "exemplos": [
+      "curl https://api.exemplo.com/dados",
+      "curl -O https://servidor/arquivo.zip",
+      "curl -X POST -d 'chave=valor' http://localhost/api"
+    ]
+  },
+  {
+    "nome": "ssh",
+    "descricao": "Cliente Secure Shell (SSH) para login remoto seguro.",
+    "uso": "Permite a conexão segura a máquinas remotas, execução de comandos e transferência segura de arquivos.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/ssh.1.html",
+    "exemplos": [
+      "ssh usuario@servidor.com",
+      "ssh -p 2222 dev@staging",
+      "ssh -L 8080:localhost:80 maquina_remota"
+    ]
+  },
+  {
+    "nome": "nslookup",
+    "descricao": "Utilitário de linha de comando para consultar servidores de nomes de domínio (DNS).",
+    "uso": "Diagnóstico de problemas de DNS e obtenção de endereços IP associados a nomes de domínio.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/nslookup.1.html",
+    "exemplos": [
+      "nslookup google.com",
+      "nslookup -type=mx servidor.email.com",
+      "nslookup 8.8.8.8"
+    ]
+  },
+  {
+    "nome": "tmux",
+    "descricao": "Multiplexador de terminal que permite criar e gerenciar várias sessões de terminal.",
+    "uso": "Permite manter processos rodando em segundo plano após desconexão e dividir janelas do terminal.",
+    "tipo": "Comando Interativo (REPLs)",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/tmux.1.html",
+    "exemplos": [
+      "tmux new -s desenvolvimento",
+      "tmux attach -t desenvolvimento",
+      "tmux list-sessions"
+    ]
+  },
+  {
+    "nome": "sed",
+    "descricao": "Editor de fluxo (stream editor) para filtrar e transformar texto.",
+    "uso": "Extremamente poderoso para operações de substituição de texto, inserção, deleção e filtragem em pipelines e arquivos.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/sed.1.html",
+    "exemplos": [
+      "sed 's/antigo/novo/g' arquivo.txt",
+      "ls -l | sed '1d'",
+      "sed -i 's/erro/sucesso/' config.yaml"
+    ]
+  },
+  {
+    "nome": "docker",
+    "descricao": "Comando principal para interagir com o Docker Engine, gerenciando containers e imagens.",
+    "uso": "Permite construir, puxar, executar, parar e inspecionar containers isolados, facilitando a portabilidade de aplicações.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://docs.docker.com/engine/reference/commandline/docker/",
+    "exemplos": [
+      "docker run -d -p 8080:80 nginx",
+      "docker ps -a",
+      "docker build -t minha-app ."
+    ]
+  },
+  {
+    "nome": "npm",
+    "descricao": "Gerenciador de pacotes para a linguagem de programação JavaScript (Node.js).",
+    "uso": "Instala, publica e gerencia dependências de projetos Node.js, sendo crucial no ecossistema de desenvolvimento web moderno.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://docs.npmjs.com/cli/v10/commands/npm",
+    "exemplos": [
+      "npm install express",
+      "npm start",
+      "npm update -g"
+    ]
+  },
+  {
+    "nome": "python",
+    "descricao": "Comando para iniciar o interpretador Python ou executar scripts Python.",
+    "uso": "Usado para executar código Python interativamente ou como um interpretador de linha de comando para scripts específicos.",
+    "tipo": "Comando Interativo (REPLs)",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://docs.python.org/3/using/cmdline.html",
+    "exemplos": [
+      "python meu_script.py",
+      "python",
+      "python -m http.server 8000"
+    ]
+  },
+  {
+    "nome": "head",
+    "descricao": "Exibe as primeiras linhas de um arquivo.",
+    "uso": "Utilizado para inspecionar rapidamente o início de arquivos de texto, como logs ou arquivos de configuração, sem precisar abrir o arquivo inteiro.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/head.1.html",
+    "exemplos": [
+      "head arquivo.txt",
+      "head -n 20 log.csv",
+      "head -c 100 /dev/random"
+    ]
+  },
+  {
+    "nome": "tail",
+    "descricao": "Exibe as últimas linhas de um arquivo.",
+    "uso": "Essencial para monitorar arquivos de log em tempo real, permitindo acompanhar novas entradas à medida que são adicionadas. Também é útil para ver o final de arquivos grandes.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/tail.1.html",
+    "exemplos": [
+      "tail -f /var/log/syslog",
+      "tail -n 50 arquivo_grande.txt",
+      "tail -c 200 data.bin"
+    ]
+  },
+  {
+    "nome": "diff",
+    "descricao": "Compara dois arquivos linha por linha.",
+    "uso": "Ferramenta fundamental para controle de versão e revisão de código. Mostra as diferenças entre dois arquivos de texto, destacando linhas adicionadas, removidas ou modificadas.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/diff.1.html",
+    "exemplos": [
+      "diff arquivo1.txt arquivo2.txt",
+      "diff -u original.c modificado.c",
+      "diff -r pasta_antiga/ pasta_nova/"
+    ]
+  },
+  {
+    "nome": "wc",
+    "descricao": "Conta linhas, palavras e caracteres em arquivos.",
+    "uso": "Utilitário simples para obter estatísticas rápidas sobre o tamanho e conteúdo de arquivos de texto. Frequentemente usado em pipelines para contar a saída de outros comandos.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/wc.1.html",
+    "exemplos": [
+      "wc -l arquivo.txt",
+      "wc -w relatorio.doc",
+      "ls -1 | wc -l"
+    ]
+  },
+  {
+    "nome": "sort",
+    "descricao": "Ordena linhas de arquivos de texto.",
+    "uso": "Usado para organizar dados alfabeticamente ou numericamente. Pode ordenar por colunas específicas e lidar com grandes volumes de dados de forma eficiente.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/sort.1.html",
+    "exemplos": [
+      "sort lista.txt",
+      "sort -r nomes.txt",
+      "sort -k2 -n dados.csv"
+    ]
+  },
+  {
+    "nome": "uniq",
+    "descricao": "Reporta ou omite linhas repetidas de um arquivo ordenado.",
+    "uso": "Utilizado para filtrar linhas duplicadas adjacentes. É comumente usado após o comando 'sort' para contar ou exibir apenas ocorrências únicas.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/uniq.1.html",
+    "exemplos": [
+      "sort ips.txt | uniq",
+      "sort acessos.log | uniq -c",
+      "sort nomes.txt | uniq -d"
+    ]
+  },
+  {
+    "nome": "du",
+    "descricao": "Estima o uso de espaço em disco por arquivos e diretórios.",
+    "uso": "Ferramenta para identificar quais arquivos e pastas estão consumindo mais espaço em disco. A opção '-h' (human-readable) é quase sempre usada para facilitar a leitura.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/du.1.html",
+    "exemplos": [
+      "du -h /home/usuario",
+      "du -sh *",
+      "du -a /var/log | sort -nr | head -n 10"
+    ]
+  },
+  {
+    "nome": "wget",
+    "descricao": "Utilitário não interativo para baixar arquivos da web.",
+    "uso": "Ferramenta robusta para download de arquivos via HTTP, HTTPS e FTP. Pode continuar downloads interrompidos e baixar sites inteiros recursivamente.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://www.gnu.org/software/wget/manual/wget.html",
+    "exemplos": [
+      "wget https://site.com/arquivo.zip",
+      "wget -c https://site.com/video_grande.mp4",
+      "wget -r -np -k https://site.com/documentacao/"
+    ]
+  },
+  {
+    "nome": "scp",
+    "descricao": "Copia arquivos de forma segura entre hosts em uma rede.",
+    "uso": "Baseado em SSH, é o comando padrão para transferir arquivos de e para servidores remotos de forma criptografada e segura.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/scp.1.html",
+    "exemplos": [
+      "scp arquivo.txt usuario@remoto:/home/usuario/",
+      "scp usuario@remoto:/var/log/app.log .",
+      "scp -r pasta/ usuario@remoto:/backup/"
+    ]
+  },
+  {
+    "nome": "history",
+    "descricao": "Exibe a lista de comandos executados anteriormente.",
+    "uso": "Permite visualizar, pesquisar e reutilizar comandos do histórico da sessão do shell, aumentando a produtividade.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/history.1.html",
+    "exemplos": [
+      "history",
+      "history | grep docker",
+      "!123"
+    ]
+  },
+  {
+    "nome": "jobs",
+    "descricao": "Lista os processos que estão em execução em segundo plano na sessão atual.",
+    "uso": "Usado para gerenciar tarefas (jobs) que foram iniciadas e colocadas em segundo plano (background), permitindo ver seu status (rodando, parado).",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/jobs.1p.html",
+    "exemplos": [
+      "jobs",
+      "jobs -l"
+    ]
+  },
+  {
+    "nome": "fg",
+    "descricao": "Traz um processo em segundo plano para o primeiro plano (foreground).",
+    "uso": "Permite retomar a interação com um processo que foi colocado em segundo plano (usando 'bg' ou Ctrl+Z), trazendo-o de volta para o terminal ativo.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/fg.1p.html",
+    "exemplos": [
+      "fg",
+      "fg %1"
+    ]
+  },
+  {
+    "nome": "bg",
+    "descricao": "Coloca um processo parado para ser executado em segundo plano (background).",
+    "uso": "Depois de parar um processo com Ctrl+Z, 'bg' o retoma, mas o mantém rodando em segundo plano, liberando o terminal para outros comandos.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/bg.1p.html",
+    "exemplos": [
+      "bg",
+      "bg %2"
+    ]
+  },
+  {
+    "nome": "lsof",
+    "descricao": "Lista arquivos abertos (List Open Files).",
+    "uso": "Ferramenta de diagnóstico poderosa para ver quais arquivos estão sendo usados por quais processos. É útil para descobrir por que um disco não pode ser desmontado ou qual processo está usando uma porta de rede.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man8/lsof.8.html",
+    "exemplos": [
+      "sudo lsof -i :80",
+      "sudo lsof /var/log/syslog",
+      "sudo lsof -u www-data"
+    ]
+  },
+  {
+    "nome": "htop",
+    "descricao": "Visualizador de processos interativo e em tempo real.",
+    "uso": "Uma versão aprimorada do 'top', com uma interface mais amigável, visualização em árvore, suporte a mouse e gerenciamento de processos mais fácil (como matar processos).",
+    "tipo": "Comando Interativo (REPLs)",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://htop.dev/",
+    "exemplos": [
+      "htop",
+      "htop -u nginx",
+      "htop -p 1234,5678"
+    ]
+  },
+  {
+    "nome": "dig",
+    "descricao": "Ferramenta de consulta de DNS (Domain Information Groper).",
+    "uso": "Utilitário de rede para realizar consultas DNS e diagnosticar problemas de resolução de nomes. É mais flexível e detalhado que o 'nslookup'.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/dig.1.html",
+    "exemplos": [
+      "dig google.com",
+      "dig MX google.com",
+      "dig @8.8.8.8 wikipedia.org"
+    ]
+  },
+  {
+    "nome": "traceroute",
+    "descricao": "Rastreia a rota que os pacotes de rede levam até um destino.",
+    "uso": "Ferramenta de diagnóstico de rede que mostra cada 'salto' (roteador) no caminho até um host de destino, ajudando a identificar onde ocorrem falhas ou latência.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man8/traceroute.8.html",
+    "exemplos": [
+      "traceroute google.com",
+      "traceroute -I 8.8.8.8"
+    ]
+  },
+  {
+    "nome": "make",
+    "descricao": "Utilitário para automação de compilação de software e outras tarefas.",
+    "uso": "Lê um 'Makefile' que define um conjunto de tarefas e suas dependências. É amplamente usado para compilar programas a partir do código-fonte, mas pode automatizar qualquer fluxo de trabalho.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://www.gnu.org/software/make/manual/make.html",
+    "exemplos": [
+      "make",
+      "make install",
+      "make clean"
+    ]
+  },
+  {
+    "nome": "kubectl",
+    "descricao": "Ferramenta de linha de comando para controlar clusters Kubernetes.",
+    "uso": "O principal cliente para interagir com a API do Kubernetes. Usado para implantar aplicações, inspecionar e gerenciar recursos do cluster e visualizar logs.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://kubernetes.io/docs/reference/kubectl/",
+    "exemplos": [
+      "kubectl get pods",
+      "kubectl apply -f deployment.yaml",
+      "kubectl logs my-pod"
+    ]
+  },
+  {
+    "nome": "terraform",
+    "descricao": "Ferramenta de Infraestrutura como Código (IaC) para provisionar e gerenciar recursos de nuvem.",
+    "uso": "Permite definir a infraestrutura (servidores, bancos de dados, redes) em arquivos de configuração declarativos e gerenciar seu ciclo de vida (criar, alterar, destruir).",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://developer.hashicorp.com/terraform/cli",
+    "exemplos": [
+      "terraform init",
+      "terraform plan",
+      "terraform apply"
+    ]
+  },
+  {
+    "nome": "ansible",
+    "descricao": "Ferramenta de automação de TI para gerenciamento de configuração, implantação de aplicações e orquestração.",
+    "uso": "Automatiza tarefas em múltiplos servidores a partir de um ponto central, usando 'playbooks' em formato YAML. Não requer agentes nos nós gerenciados, usando SSH.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://docs.ansible.com/ansible/latest/cli/ansible.html",
+    "exemplos": [
+      "ansible-playbook deploy.yml",
+      "ansible all -m ping",
+      "ansible-galaxy install geerlingguy.nginx"
+    ]
+  },
+  {
+    "nome": "powershell",
+    "descricao": "Shell de linha de comando e linguagem de script baseado em tarefas, construído sobre o .NET.",
+    "uso": "O shell moderno e preferido para automação e gerenciamento no Windows. Trabalha com objetos em vez de texto, permitindo uma manipulação de dados mais poderosa e estruturada.",
+    "tipo": "Comando Interativo (REPLs)",
+    "sistema-operacional": [
+      "Windows",
+      " Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/powershell/",
+    "exemplos": [
+      "Get-Process",
+      "Get-Service | Where-Object {$_.Status -eq 'Running'}",
+      "Invoke-WebRequest -Uri 'https://api.github.com'"
+    ]
+  },
+  {
+    "nome": "mv",
+    "descricao": "Move ou renomeia arquivos e diretórios.",
+    "uso": "Usado tanto para mover arquivos e diretórios de um local para outro quanto para renomeá-los. A ação de renomear é, na verdade, mover um arquivo para o mesmo diretório com um nome diferente.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/mv.1.html",
+    "exemplos": [
+      "mv arquivo.txt /home/usuario/Documentos/",
+      "mv nome_antigo.txt nome_novo.txt",
+      "mv pasta_origem/ pasta_destino/"
+    ]
+  },
+  {
+    "nome": "alias",
+    "descricao": "Cria um atalho (apelido) para um comando ou sequência de comandos.",
+    "uso": "Aumenta a produtividade na linha de comando, permitindo a criação de atalhos curtos e fáceis de lembrar para comandos longos ou usados com frequência.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/alias.1p.html",
+    "exemplos": [
+      "alias ll='ls -lha'",
+      "alias update='sudo apt update && sudo apt upgrade -y'",
+      "unalias ll"
+    ]
+  },
+  {
+    "nome": "xargs",
+    "descricao": "Constrói e executa linhas de comando a partir da entrada padrão.",
+    "uso": "Pega a saída de um comando (via pipe) e a usa como argumento para outro comando. É extremamente útil para aplicar uma operação a uma lista de itens, como deletar múltiplos arquivos encontrados por 'find'.",
+    "tipo": "Comando de Shell Scripting",
+    "sistema-operacional": [
+      "Linux",
+      " MacOS"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      " Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://man7.org/linux/man-pages/man1/xargs.1.html",
+    "exemplos": [
+      "find . -name '*.tmp' | xargs rm",
+      "ls *.jpg | xargs -I {} mv {} ./backup/",
+      "git branch | grep -v 'main' | xargs git branch -D"
+    ]
+  },
+  {
+    "nome": "get-help",
+    "descricao": "Exibe informações de ajuda sobre cmdlets e conceitos do PowerShell.",
+    "uso": "O equivalente do 'man' no PowerShell. É usado para entender a sintaxe, parâmetros e exemplos de uso de qualquer comando do PowerShell.",
+    "tipo": "Comando PowerShell",
+    "sistema-operacional": [
+      "Windows"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/powershell/module/microsoft.powershell.core/get-help",
+    "exemplos": [
+      "Get-Help Get-Process",
+      "Get-Help Get-Process -Examples",
+      "Get-Help about_Functions"
+    ]
+  },
+  {
+    "nome": "get-process",
+    "descricao": "Obtém os processos que estão em execução no computador local ou remoto.",
+    "uso": "Versão em objeto do 'tasklist'. Permite não apenas listar, mas também manipular os processos retornados, como parar ou inspecionar suas propriedades.",
+    "tipo": "Comando PowerShell",
+    "sistema-operacional": [
+      "Windows"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/powershell/module/microsoft.powershell.management/get-process",
+    "exemplos": [
+      "Get-Process",
+      "Get-Process -Name 'chrome'",
+      "Get-Process | Sort-Object -Property CPU -Descending | Select-Object -First 5"
+    ]
+  },
+  {
+    "nome": "stop-process",
+    "descricao": "Para um ou mais processos em execução.",
+    "uso": "Equivalente ao 'taskkill' do PowerShell. Pode parar processos pelo nome ou pelo ID (PID), oferecendo mais controle e feedback.",
+    "tipo": "Comando PowerShell",
+    "sistema-operacional": [
+      "Windows"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/powershell/module/microsoft.powershell.management/stop-process",
+    "exemplos": [
+      "Stop-Process -Name 'notepad'",
+      "Stop-Process -Id 1234 -Force",
+      "Get-Process 'chrome' | Stop-Process"
+    ]
+  },
+  {
+    "nome": "get-service",
+    "descricao": "Obtém os serviços em um computador local ou remoto.",
+    "uso": "Permite listar todos os serviços do Windows, verificar seus status (em execução, parado) e outras propriedades, de forma programática.",
+    "tipo": "Comando PowerShell",
+    "sistema-operacional": [
+      "Windows"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/powershell/module/microsoft.powershell.management/get-service",
+    "exemplos": [
+      "Get-Service",
+      "Get-Service -Name 'wuauserv'",
+      "Get-Service | Where-Object {$_.Status -eq 'Running'}"
+    ]
+  },
+  {
+    "nome": "start-service",
+    "descricao": "Inicia um ou mais serviços parados.",
+    "uso": "Usado para iniciar serviços do Windows a partir da linha de comando, essencial para scripts de automação e gerenciamento de servidores.",
+    "tipo": "Comando PowerShell",
+    "sistema-operacional": [
+      "Windows"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/powershell/module/microsoft.powershell.management/start-service",
+    "exemplos": [
+      "Start-Service -Name 'spooler'",
+      "Get-Service 'wuauserv' | Start-Service",
+      "Start-Service -DisplayName 'Windows Update'"
+    ]
+  },
+  {
+    "nome": "get-content",
+    "descricao": "Obtém o conteúdo de um item, como o texto em um arquivo.",
+    "uso": "Equivalente ao 'cat' do PowerShell. É usado para ler o conteúdo de arquivos de texto, linha por linha, e processá-los como objetos.",
+    "tipo": "Comando PowerShell",
+    "sistema-operacional": [
+      "Windows"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/powershell/module/microsoft.powershell.management/get-content",
+    "exemplos": [
+      "Get-Content -Path 'C:\\Windows\\System32\\drivers\\etc\\hosts'",
+      "Get-Content log.txt -Tail 10",
+      "Get-Content users.csv | ConvertFrom-Csv"
+    ]
+  },
+  {
+    "nome": "set-content",
+    "descricao": "Grava ou substitui o conteúdo de um arquivo.",
+    "uso": "Usado para escrever texto em um arquivo. Por padrão, substitui todo o conteúdo existente. É uma forma rápida de criar ou modificar arquivos de configuração.",
+    "tipo": "Comando PowerShell",
+    "sistema-operacional": [
+      "Windows"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/powershell/module/microsoft.powershell.management/set-content",
+    "exemplos": [
+      "'novo conteúdo' | Set-Content -Path 'arquivo.txt'",
+      "Set-Content -Path 'log.txt' -Value 'iniciando...'",
+      "Get-Process | Out-String | Set-Content -Path 'processos.txt'"
+    ]
+  },
+  {
+    "nome": "get-childitem",
+    "descricao": "Obtém os itens e itens filho em um ou mais locais especificados.",
+    "uso": "O equivalente do 'dir' ou 'ls' no PowerShell. É usado para listar arquivos e diretórios, com opções poderosas de filtragem e recursividade.",
+    "tipo": "Comando PowerShell",
+    "sistema-operacional": [
+      "Windows"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/powershell/module/microsoft.powershell.management/get-childitem",
+    "exemplos": [
+      "Get-ChildItem -Path 'C:\\Users'",
+      "Get-ChildItem -Path '*.txt' -Recurse",
+      "gci -Path 'HKLM:\\Software' (lista chaves do registro)"
+    ]
+  },
+  {
+    "nome": "remove-item",
+    "descricao": "Exclui um ou mais itens.",
+    "uso": "O equivalente do 'del' ou 'rm' no PowerShell. Usado para remover arquivos, diretórios, chaves de registro e outros itens do sistema.",
+    "tipo": "Comando PowerShell",
+    "sistema-operacional": [
+      "Windows"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/powershell/module/microsoft.powershell.management/remove-item",
+    "exemplos": [
+      "Remove-Item -Path 'arquivo_temporario.tmp'",
+      "Remove-Item -Path 'C:\\Temp' -Recurse -Force",
+      "Get-ChildItem '*.log' | Remove-Item"
+    ]
+  },
+  {
+    "nome": "new-item",
+    "descricao": "Cria um novo item, como um arquivo ou diretório.",
+    "uso": "O equivalente do 'mkdir' ou 'touch' no PowerShell. Pode criar tanto arquivos vazios quanto novas pastas.",
+    "tipo": "Comando PowerShell",
+    "sistema-operacional": [
+      "Windows"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/powershell/module/microsoft.powershell.management/new-item",
+    "exemplos": [
+      "New-Item -Path 'C:\\Projetos' -ItemType Directory",
+      "New-Item -Path 'script.ps1' -ItemType File",
+      "New-Item -Path 'HKCU:\\Software\\MeuApp' -ItemType Key"
+    ]
+  },
+  {
+    "nome": "test-path",
+    "descricao": "Verifica se todos os elementos de um caminho existem.",
+    "uso": "Usado em scripts para verificar se um arquivo ou diretório existe antes de tentar lê-lo ou modificá-lo. Retorna True ou False.",
+    "tipo": "Comando PowerShell",
+    "sistema-operacional": [
+      "Windows"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/powershell/module/microsoft.powershell.management/test-path",
+    "exemplos": [
+      "Test-Path -Path 'C:\\Windows'",
+      "if (Test-Path 'config.xml') { Get-Content 'config.xml' }",
+      "Test-Path -Path 'HKLM:\\Software\\Microsoft'"
+    ]
+  },
+  {
+    "nome": "test-connection",
+    "descricao": "Envia pacotes de eco ICMP (pings) para um ou mais computadores.",
+    "uso": "O equivalente do 'ping' no PowerShell. É mais robusto, pois retorna um objeto com detalhes sobre a resposta, facilitando o uso em scripts.",
+    "tipo": "Comando PowerShell",
+    "sistema-operacional": [
+      "Windows"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/powershell/module/microsoft.powershell.management/test-connection",
+    "exemplos": [
+      "Test-Connection -ComputerName 'google.com'",
+      "Test-Connection -TargetName '192.168.1.1' -Count 2",
+      "'server1', 'server2' | Test-Connection -Quiet"
+    ]
+  },
+  {
+    "nome": "resolve-dnsname",
+    "descricao": "Executa uma consulta DNS para um nome especificado.",
+    "uso": "O equivalente do 'nslookup' no PowerShell. Usado para obter registros DNS (A, MX, CNAME, etc.) de um domínio, retornando objetos estruturados.",
+    "tipo": "Comando PowerShell",
+    "sistema-operacional": [
+      "Windows"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/powershell/module/dnsclient/resolve-dnsname",
+    "exemplos": [
+      "Resolve-DnsName -Name 'google.com'",
+      "Resolve-DnsName -Name 'google.com' -Type MX",
+      "Resolve-DnsName -Name '8.8.8.8'"
+    ]
+  },
+  {
+    "nome": "diskpart",
+    "descricao": "Utilitário de linha de comando para gerenciar discos, partições e volumes.",
+    "uso": "Ferramenta poderosa para administradores de sistema que precisam criar, excluir, formatar ou modificar partições de disco. Opera em um modo interativo.",
+    "tipo": "Comando Interativo (REPLs)",
+    "sistema-operacional": [
+      "Windows"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/diskpart",
+    "exemplos": [
+      "diskpart",
+      "list disk",
+      "select disk 1"
+    ]
+  },
+  {
+    "nome": "gpupdate",
+    "descricao": "Atualiza as configurações da Política de Grupo (Group Policy).",
+    "uso": "Força a aplicação imediata de quaisquer alterações de Política de Grupo em um computador cliente ou servidor, sem a necessidade de esperar pelo ciclo de atualização automático ou reiniciar.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/gpupdate",
+    "exemplos": [
+      "gpupdate",
+      "gpupdate /force",
+      "gpupdate /target:user"
+    ]
+  },
+  {
+    "nome": "gpresult",
+    "descricao": "Exibe o conjunto de políticas resultante (RSoP) para um usuário e computador.",
+    "uso": "Ferramenta de diagnóstico essencial para verificar quais configurações de Política de Grupo estão sendo aplicadas a um usuário ou computador e de qual GPO elas se originam.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/gpresult",
+    "exemplos": [
+      "gpresult /r",
+      "gpresult /s computadorRemoto /user dominio\\usuario /z",
+      "gpresult /h relatorio.html"
+    ]
+  },
+  {
+    "nome": "schtasks",
+    "descricao": "Cria, exclui, consulta, altera, executa e encerra tarefas agendadas em um sistema local ou remoto.",
+    "uso": "Permite o gerenciamento completo do Agendador de Tarefas do Windows via linha de comando, ideal para automação de rotinas e scripts.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/schtasks",
+    "exemplos": [
+      "schtasks /query",
+      "schtasks /create /sc daily /tn 'MeuBackup' /tr 'C:\\scripts\\backup.bat'",
+      "schtasks /run /tn 'MeuBackup'"
+    ]
+  },
+  {
+    "nome": "wevtutil",
+    "descricao": "Utilitário de Linha de Comando de Eventos do Windows para gerenciar logs de eventos.",
+    "uso": "Permite consultar, exportar, arquivar e limpar logs de eventos do Windows. É uma ferramenta poderosa para análise forense e monitoramento de sistemas.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/wevtutil",
+    "exemplos": [
+      "wevtutil qe System /c:10 /rd:true /f:text",
+      "wevtutil cl Security",
+      "wevtutil epl Application C:\\logs\\applog.evtx"
+    ]
+  },
+  {
+    "nome": "bcdedit",
+    "descricao": "Ferramenta de linha de comando para gerenciar dados de configuração de inicialização (Boot Configuration Data).",
+    "uso": "Usado para configurar o menu de inicialização do Windows, habilitar o modo de depuração ou modificar opções avançadas de boot. Requer privilégios de administrador.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/bcdedit",
+    "exemplos": [
+      "bcdedit /enum",
+      "bcdedit /set {current} safeboot minimal",
+      "bcdedit /timeout 10"
+    ]
+  },
+  {
+    "nome": "netsh",
+    "descricao": "Shell de rede (Network Shell). Utilitário para configurar e exibir o status de vários componentes de rede.",
+    "uso": "Permite configurar interfaces de rede, regras de firewall, configurações de IP e muito mais. Embora algumas funções estejam sendo substituídas por cmdlets do PowerShell, ainda é amplamente utilizado.",
+    "tipo": "Comando Interativo (REPLs)",
+    "sistema-operacional": [
+      "Windows"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/netsh",
+    "exemplos": [
+      "netsh interface ip show config",
+      "netsh advfirewall firewall add rule name='AllowSQL' dir=in action=allow protocol=TCP localport=1433",
+      "netsh wlan show profiles"
+    ]
+  },
+  {
+    "nome": "findstr",
+    "descricao": "Procura por padrões de texto em arquivos.",
+    "uso": "O equivalente do 'grep' no CMD. É usado para encontrar linhas que contêm uma string específica em um ou mais arquivos, com suporte básico a expressões regulares.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/findstr",
+    "exemplos": [
+      "findstr 'erro' log.txt",
+      "dir | findstr /i 'relatorio'",
+      "findstr /s /i 'senha' *.ini"
+    ]
+  },
+  {
+    "nome": "where",
+    "descricao": "Localiza e exibe a localização de arquivos que correspondem a um padrão de pesquisa.",
+    "uso": "Semelhante ao 'which' do Linux. É usado para encontrar o caminho completo de um executável ou outro arquivo que está no PATH do sistema ou em diretórios especificados.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/where",
+    "exemplos": [
+      "where node",
+      "where /r C:\\Windows *.exe",
+      "where python"
+    ]
+  },
+  {
+    "nome": "fc",
+    "descricao": "Compara dois arquivos ou conjuntos de arquivos e exibe as diferenças entre eles.",
+    "uso": "File Compare (FC) é o equivalente do 'diff' no CMD. É usado para verificar se dois arquivos são idênticos ou para ver as linhas que diferem entre eles.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/fc",
+    "exemplos": [
+      "fc arquivo1.txt arquivo2.txt",
+      "fc /b imagem1.jpg imagem2.jpg",
+      "fc /n config.old config.new"
+    ]
+  },
+  {
+    "nome": "runas",
+    "descricao": "Permite que um usuário execute programas específicos com permissões diferentes das do usuário atual.",
+    "uso": "Semelhante ao 'sudo' do Linux. É usado para executar um aplicativo como outro usuário (geralmente um administrador) sem fazer logoff da sessão atual.",
+    "tipo": "Comando de Shell Padrão",
+    "sistema-operacional": [
+      "Windows"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/runas",
+    "exemplos": [
+      "runas /user:Administrador cmd.exe",
+      "runas /user:DOMINIO\\Admin 'mmc.exe'",
+      "runas /savecred /user:Admin 'regedit.exe'"
+    ]
+  },
+  {
+    "nome": "get-netipaddress",
+    "descricao": "Obtém informações de configuração de endereço IP.",
+    "uso": "O cmdlet moderno do PowerShell para substituir 'ipconfig'. Retorna objetos detalhados sobre as interfaces de rede, endereços IP, gateways e muito mais.",
+    "tipo": "Comando PowerShell",
+    "sistema-operacional": [
+      "Windows"
+    ],
+    "interface": [
+      "Local (Máquina do Usuário)",
+      "Remoto (SSH/Cloud CLIs)"
+    ],
+    "link": "https://learn.microsoft.com/pt-br/powershell/module/nettcpip/get-netipaddress",
+    "exemplos": [
+      "Get-NetIPAddress",
+      "Get-NetIPAddress -AddressFamily IPv4",
+      "Get-NetAdapter | Get-NetIPAddress"
+    ]
+  }
+]
