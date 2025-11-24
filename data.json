@@ -12,6 +12,25 @@
     ]
   },
   {
+    "nome": "echo",
+    "descricao": "Exibe o texto que você fornece como argumento no terminal.",
+    "uso": "É frequentemente usado em scripts de shell para mostrar status, mensagens ou o conteúdo de variáveis. Também pode ser usado para redirecionar dados para um arquivo.",
+    "tipo": "Comando de Shell Padrão",
+    "link": "https://linux.die.net/man/1/echo",
+    "exemplos": [
+      "echo Hello World",
+      "echo $PATH"
+    ],
+    "interface": [
+        "Linha de Comando"
+    ],
+    "sistema-operacional": [
+        "Linux",
+        " macOS",
+        " Windows"
+    ]
+  },
+  {
     "nome": "git-am",
     "descricao": "Aplica uma série de patches de uma caixa de e-mail (mbox).",
     "uso": "Usado para aplicar patches que foram gerados usando 'git format-patch' e enviados via e-mail, simulando um fluxo de trabalho de aplicação de patches.",
