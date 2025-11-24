@@ -1,0 +1,96 @@
+{
+    "respostas_simuladas": [
+      {
+        "comando": "ajuda",
+        "retorno": "Comandos disponíveis atualmente para você testar a ferramenta: mkdir, rm, ls, cd, echo, git status, git branch, git pull, git push, git add, git checkout, git clone, git init."
+      },
+      {
+        "comando": "mkdir",
+        "retorno": "Atenção!!! Use: mkdir nomeDaPasta"
+      },
+      {
+        "comando": "mkdir nomeDaPasta",
+        "retorno": "Comando válido! Busque pelo nome do mesmo na tela principal para maiores informações."
+      },
+      {
+        "comando": "rm",
+        "retorno": "Atenção!!! Use: rm nomeDoArquivo.extensao"
+      },
+      {
+        "comando": "rm nomeDoArquivo.extensao",
+        "retorno": "Comando válido! Busque pelo nome do mesmo na tela principal para maiores informações."
+      },
+      {
+        "comando": "ls",
+        "retorno": "Comando válido! Busque pelo nome do mesmo na tela principal para maiores informações."
+      },
+      {
+        "comando": "cd",
+        "retorno": "Atenção!!! Use: cd nomeDoDiretório"
+      },
+      {
+        "comando": "cd nomeDoDiretório",
+        "retorno": "Comando válido! Busque pelo nome do mesmo na tela principal para maiores informações."
+      },
+      {
+        "comando": "echo",
+        "retorno": "Atenção!!! Use: echo textoDesejado"
+      },
+      {
+        "comando": "echo textoDesejado",
+        "retorno": "Comando válido! Busque pelo nome do mesmo na tela principal para maiores informações."
+      },
+      {
+        "comando": "echo Hello World",
+        "retorno": "Comando válido! Busque pelo nome do mesmo na tela principal para maiores informações."
+      },
+      {
+        "comando": "git status",
+        "retorno": "Comando válido! Busque pelo nome do mesmo na tela principal para maiores informações."
+      },
+      {
+        "comando": "git branch",
+        "retorno": "Comando válido! Busque pelo nome do mesmo na tela principal para maiores informações."
+      },
+      {
+        "comando": "git pull",
+        "retorno": "Comando válido! Busque pelo nome do mesmo na tela principal para maiores informações."
+      },
+      {
+        "comando": "git push",
+        "retorno": "Comando válido! Busque pelo nome do mesmo na tela principal para maiores informações."
+      },
+      {
+        "comando": "git add",
+        "retorno": "Atenção!!! Use: git add nomeDoArquivo.extensao ou git add ."
+      },
+      {
+        "comando": "git add .",
+        "retorno": "Comando válido! Busque pelo nome do mesmo na tela principal para maiores informações."
+      },
+      {
+        "comando": "git add nomeDoArquivo.extensao",
+        "retorno": "Comando válido! Busque pelo nome do mesmo na tela principal para maiores informações."
+      },
+      {
+        "comando": "git checkout",
+        "retorno": "Atenção!!! Use: git checkout nomeDoBranch"
+      },
+      {
+        "comando": "git checkout nomeDoBranch",
+        "retorno": "Comando válido! Busque pelo nome do mesmo na tela principal para maiores informações."
+      },
+      {
+        "comando": "git clone",
+        "retorno": "Atenção!!! Use: git clone urlDoRepositório"
+      },
+      {
+        "comando": "git clone urlDoRepositório",
+        "retorno": "Comando válido! Busque pelo nome do mesmo na tela principal para maiores informações."
+      },
+      {
+        "comando": "git init",
+        "retorno": "Comando válido! Busque pelo nome do mesmo na tela principal para maiores informações."
+      }
+    ]
+}
